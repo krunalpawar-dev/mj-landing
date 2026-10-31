@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /app/
+Disallow: /scripts/
+Disallow: /tests/
+Sitemap: http://mj-dynamic.test/sitemap.xml

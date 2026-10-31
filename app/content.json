@@ -1,0 +1,1298 @@
+{
+  "projects": [
+    {
+      "slug": "bharat-medical-backoffice-management-system",
+      "weight": 110,
+      "title": "Bharat Medical Hall – Back Office & Business Management System",
+      "short": "Bharat Medical Hall",
+      "theme": "medical",
+      "icon": "grid",
+      "industry": "Medical retail · Baripada, Odisha",
+      "categories": [
+        "Laravel",
+        "Healthcare",
+        "HRMS"
+      ],
+      "description": "A complete website and back-office platform for Bharat Medical Hall in Baripada, Odisha, bringing employee, financial and daily business operations into one place.",
+      "features": [
+        "Order Management",
+        "Employee Attendance Management",
+        "Leave Management",
+        "Payroll & Salary Management",
+        "Salary Payslip Generation",
+        "Project & Task Management",
+        "Challan Management",
+        "Supplier Management",
+        "Customer Management",
+        "Expense Management"
+      ],
+      "problem": "Bharat Medical Hall needed a centralized way to manage daily operations, employees, finances and administrative work. The system was designed to reduce manual work and make business activities easier to track.",
+      "solution": "We built a connected business management platform with ten modules. Staff can manage orders, customers, suppliers and challans alongside attendance, leave, payroll, payslips, projects, tasks and expenses. An operations dashboard brings staff availability and sales orders into a consolidated view.",
+      "contribution": "As the full-stack delivery team, we independently developed the complete website and back-office management system. Our responsibilities included system architecture, database design, backend development, business logic and user interface implementation.",
+      "impact": "The system helps the organization reduce manual work, manage employees effectively and track business activities in one platform. Connected operational and financial records support better control over everyday administrative processes.",
+      "related_services": [
+        "custom-web-application-development",
+        "hrms-development",
+        "admin-panel-development",
+        "erp-development"
+      ],
+      "architecture": "Centralized business management",
+      "technologies": [
+        "Laravel",
+        "PHP"
+      ],
+      "screenshots": [],
+      "published": true
+    },
+    {
+      "slug": "kumbhsnaan-digital-ritual-booking-platform",
+      "weight": 95,
+      "title": "KumbhSnaan – Digital Gateway to Nashik Simhastha Kumbh",
+      "short": "KumbhSnaan",
+      "theme": "spiritual",
+      "icon": "grid",
+      "industry": "Spiritual services · Nashik",
+      "categories": [
+        "Website"
+      ],
+      "description": "A digital spiritual platform connecting devotees worldwide with Nashik Simhastha Kumbh through personalized Digital Snaan and Sankalp ritual bookings.",
+      "features": [
+        "Digital Snaan & Sankalp bookings",
+        "Devotee photo upload",
+        "Personal prayer submission",
+        "Preferred sacred date selection",
+        "Multiple ritual packages",
+        "Personalized ritual videos",
+        "Digital participation certificates",
+        "Holy Godavari Water & Prasad offerings"
+      ],
+      "problem": "Devotees living away from Nashik need a simple way to participate in sacred traditions remotely. The platform brings ritual information, package choices and personalized booking details into one accessible online journey.",
+      "solution": "KumbhSnaan lets devotees choose a ritual package and preferred sacred date, upload a photo and share their prayer. The service connects these requests with rituals performed by verified priests at holy kunds in Nashik. Depending on the package, devotees receive personalized ritual videos, digital certificates and sacred offerings such as Holy Godavari Water and Prasad.",
+      "contribution": "We developed KumbhSnaan, a digital spiritual platform bringing ritual discovery, package selection and personalized booking together in one website.",
+      "impact": "The platform makes it easier for devotees to arrange participation from anywhere in the world. A guided booking journey brings the information needed for personalized rituals and delivery together, while clear package details help visitors understand what they will receive.",
+      "related_services": [
+        "custom-web-application-development"
+      ],
+      "architecture": "Ritual discovery & booking",
+      "technologies": [],
+      "screenshots": [
+        {
+          "src": "/assets/img/portfolio/kumbhsnaan/home.jpg",
+          "alt": "KumbhSnaan homepage introducing Digital Snaan and the ritual booking journey. Frame from the supplied project recording."
+        },
+        {
+          "src": "/assets/img/portfolio/kumbhsnaan/booking.jpg",
+          "alt": "KumbhSnaan booking form with contact details and devotee photo upload. Frame from the supplied project recording."
+        }
+      ],
+      "published": true
+    },
+    {
+      "slug": "treeva-healthcare-management-system",
+      "weight": 120,
+      "title": "Treeva Healthcare – Healthcare Website & Clinic Management System",
+      "short": "Treeva Healthcare",
+      "theme": "treeva",
+      "icon": "grid",
+      "industry": "Healthcare & wellness",
+      "categories": [
+        "Laravel",
+        "Healthcare",
+        "Website"
+      ],
+      "description": "A public healthcare website and connected clinic management system for Treeva Healthcare, bringing patient enquiries, appointments, billing and daily administration into one workflow.",
+      "features": [
+        "Website: Modern Healthcare & Wellness Landing Website",
+        "Website: Healthcare Service & Treatment Showcase",
+        "Website: Lead and Enquiry Collection",
+        "Website: Online Appointment Booking",
+        "Website: Contact and Consultation Requests",
+        "Website: Mobile Responsive User Interface",
+        "Admin panel: Patient Management",
+        "Admin panel: Appointment Management",
+        "Admin panel: Lead & Enquiry Management",
+        "Admin panel: Services Management",
+        "Admin panel: Billing Management",
+        "Admin panel: Invoice Generation",
+        "Admin panel: Expense Management",
+        "Admin panel: Staff & User Management",
+        "Admin panel: Role-Based Access Control",
+        "Admin panel: Centralized Administrative Dashboard"
+      ],
+      "problem": "Treeva Healthcare needed a public website to showcase its healthcare and wellness services, collect patient enquiries and support online appointment booking. The center also needed an administration system to manage patients, services, finances and staff in one place.",
+      "solution": "We developed a complete website and clinic management system for a center focused on homeopathy, cosmetology, skin and hair care, aesthetic consultation and obesity management. The public website presents services and collects appointment and consultation requests. A connected admin panel manages the workflow from enquiry and scheduling to patient records, billing, invoices, expenses and staff administration.",
+      "contribution": "As the full-stack delivery team, we independently developed the complete project: the public healthcare website, admin panel, database architecture, backend development, business logic, appointment workflow, billing and invoice management, role-based permissions and responsive user interface.",
+      "impact": "The system streamlines the journey from patient enquiry and appointment booking to clinic administration. Centralized patient, service and financial records help the team coordinate day-to-day work, while role-based access controls staff access to administrative functions.",
+      "related_services": [
+        "healthcare-management-system-development",
+        "admin-panel-development",
+        "custom-web-application-development"
+      ],
+      "architecture": "Public website + clinic administration",
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "Bootstrap / Tailwind CSS"
+      ],
+      "screenshots": [
+        {
+          "src": "/assets/img/portfolio/treeva/appointments.jpg",
+          "alt": "Treeva Healthcare public website offering appointment requests and patient enquiries. Frame from the supplied project recording."
+        },
+        {
+          "src": "/assets/img/portfolio/treeva/invoices.jpg",
+          "alt": "Treeva Healthcare admin panel showing invoice numbering and clinic invoice settings. Frame from the supplied project recording."
+        },
+        {
+          "src": "/assets/img/portfolio/treeva/permissions.jpg",
+          "alt": "Treeva Healthcare role and permission management screen. Frame from the supplied project recording."
+        }
+      ],
+      "published": true
+    },
+    {
+      "slug": "finserv-crm-business-management-platform",
+      "weight": 115,
+      "title": "FinServ CRM – Customer & Business Management Platform",
+      "short": "FinServ CRM",
+      "theme": "crm",
+      "icon": "grid",
+      "industry": "Financial services · Customer operations",
+      "categories": [
+        "Laravel",
+        "CRM",
+        "ERP"
+      ],
+      "description": "A connected CRM workspace for customer conversations, follow-ups, tasks, invoicing and day-to-day business activity.",
+      "features": [
+        "Customer and contact management",
+        "Lead and follow-up tracking",
+        "Team chat and email workspace",
+        "Task and to-do management",
+        "Sales and activity dashboard",
+        "Invoice management",
+        "Search and notifications",
+        "CSV invoice exports"
+      ],
+      "problem": "Customer conversations, pending work and billing information can become difficult to follow when they are spread across separate tools. FinServ needed a shared workspace where the team could see activity, manage communication and keep financial follow-ups visible.",
+      "solution": "We developed a CRM and business management interface that brings contacts, email, team communication, tasks and invoices into one application. Dashboard views make activity easier to review, while searchable records and invoice statuses help the team identify the next action.",
+      "contribution": "We worked on the full-stack application experience, connecting the customer, communication, task and invoice workflows and implementing the responsive administration interface.",
+      "impact": "The platform gives the team one operational view of customer activity and billing work. It reduces the need to switch between disconnected records and makes outstanding actions easier to identify.",
+      "related_services": [
+        "crm-development",
+        "erp-development",
+        "admin-panel-development"
+      ],
+      "architecture": "Connected CRM workspace",
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "JavaScript"
+      ],
+      "screenshots": [
+        {
+          "src": "/assets/img/portfolio/crm/ERP1.png",
+          "alt": "FinServ CRM dashboard with activity analytics and returning-customer overview."
+        },
+        {
+          "src": "/assets/img/portfolio/crm/ERP2.png",
+          "alt": "FinServ CRM email workspace for managing customer conversations."
+        },
+        {
+          "src": "/assets/img/portfolio/crm/ERP3.png",
+          "alt": "FinServ CRM invoice list with payment status, search, export and record actions."
+        }
+      ],
+      "published": true
+    },
+    {
+      "slug": "ds-shoppy-ecommerce-rewards-platform",
+      "weight": 105,
+      "title": "DS Shoppy – E-commerce & Rewards Platform",
+      "short": "DS Shoppy",
+      "theme": "commerce",
+      "icon": "grid",
+      "industry": "Retail · E-commerce",
+      "categories": [
+        "Laravel",
+        "E-commerce",
+        "Website"
+      ],
+      "description": "An online shopping platform with product discovery, customer accounts, cart and checkout, GST calculations, cashback and referral rewards.",
+      "features": [
+        "Product catalogue and search",
+        "Category-based browsing",
+        "Customer registration and login",
+        "Shopping cart and quantity updates",
+        "Address-based checkout",
+        "GST calculation and order summary",
+        "Cashback and reward offers",
+        "Referral rewards"
+      ],
+      "problem": "DS Shoppy needed an online storefront that could support the complete buying journey while also presenting its daily-order cashback and referral programme clearly to customers.",
+      "solution": "We built a responsive e-commerce experience that connects catalogue browsing, search, customer accounts, cart management and checkout. The checkout captures delivery details and presents tax totals, while dedicated promotional content explains the cashback and referral model.",
+      "contribution": "We developed the storefront and purchase flow, including product discovery, account access, cart interactions, checkout details, GST calculation and the rewards-focused customer experience.",
+      "impact": "Customers can move from finding a product to reviewing tax and delivery information in one guided journey. The same platform also gives DS Shoppy a clear place to communicate its rewards programme.",
+      "related_services": [
+        "custom-web-application-development",
+        "api-development-integration",
+        "admin-panel-development"
+      ],
+      "architecture": "Storefront + checkout + rewards",
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "JavaScript"
+      ],
+      "screenshots": [
+        {
+          "src": "/assets/img/portfolio/dsshoppy/D1.png",
+          "alt": "DS Shoppy storefront introducing its cashback and referral rewards."
+        },
+        {
+          "src": "/assets/img/portfolio/dsshoppy/D2.png",
+          "alt": "DS Shoppy shopping cart with quantity controls and order total."
+        },
+        {
+          "src": "/assets/img/portfolio/dsshoppy/D3.png",
+          "alt": "DS Shoppy checkout with delivery details and GST summary."
+        }
+      ],
+      "published": true
+    },
+    {
+      "slug": "electronics-ecommerce-storefront",
+      "weight": 80,
+      "title": "Electronics Store – Product Discovery E-commerce Website",
+      "short": "Electronics Store",
+      "theme": "commerce",
+      "icon": "grid",
+      "industry": "Consumer electronics · E-commerce",
+      "categories": [
+        "E-commerce",
+        "Website"
+      ],
+      "description": "A catalogue-led electronics storefront with promotional collections, category browsing, product filters and customer enquiries.",
+      "features": [
+        "Promotional product collections",
+        "Category navigation",
+        "Product catalogue grid",
+        "Stock and sale filters",
+        "Brand-based browsing",
+        "Product ratings and pricing",
+        "Customer contact form",
+        "Responsive storefront layout"
+      ],
+      "problem": "A broad electronics catalogue needs a clear way for shoppers to move from featured promotions into focused product browsing without losing access to categories, brands and availability filters.",
+      "solution": "We built a retail storefront that combines campaign-led landing content with a filterable shop grid. Product status, category and brand options help visitors narrow the catalogue, while contact and account areas support the wider customer journey.",
+      "contribution": "We implemented the responsive storefront pages, catalogue navigation, filtering experience, promotional layouts and customer contact interface.",
+      "impact": "The website gives shoppers a structured way to explore a large catalogue and gives the retailer reusable spaces for promotions, categories and customer enquiries.",
+      "related_services": [
+        "custom-web-application-development",
+        "admin-panel-development"
+      ],
+      "architecture": "Catalogue-led storefront",
+      "technologies": [
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "Bootstrap"
+      ],
+      "screenshots": [
+        {
+          "src": "/assets/img/portfolio/e-commerce/E1.png",
+          "alt": "Electronics storefront hero highlighting a featured smartwatch collection."
+        },
+        {
+          "src": "/assets/img/portfolio/e-commerce/E2.png",
+          "alt": "Electronics catalogue with product status, category and brand filters."
+        },
+        {
+          "src": "/assets/img/portfolio/e-commerce/E3.png",
+          "alt": "Electronics storefront customer contact page."
+        }
+      ],
+      "published": true
+    },
+    {
+      "slug": "kakubaa-student-support-website",
+      "weight": 85,
+      "title": "Kakubaa – Student Support & Guidance Website",
+      "short": "Kakubaa",
+      "theme": "education",
+      "icon": "layers",
+      "industry": "Education · Student support",
+      "categories": [
+        "Education",
+        "Website"
+      ],
+      "description": "A responsive education website presenting academic guidance, student support services and consultation plans in one clear experience.",
+      "features": [
+        "Student-focused landing page",
+        "Academic support services",
+        "Service and plan presentation",
+        "About and team pages",
+        "Blog content area",
+        "Contact enquiries",
+        "WhatsApp contact access",
+        "Responsive navigation"
+      ],
+      "problem": "Kakubaa needed a welcoming public website that could explain its student guidance offering, present available plans and make it easy for students to start a conversation.",
+      "solution": "We created a bright, student-focused website with dedicated areas for services, plans, educational content, the team and contact options. Clear navigation and persistent WhatsApp access keep support within reach throughout the site.",
+      "contribution": "We developed the complete responsive website experience, including the service presentation, content structure, contact journey and mobile-friendly interface.",
+      "impact": "The site gives students and families a single place to understand Kakubaa’s offering, compare support options and make an enquiry using the channel that suits them.",
+      "related_services": [
+        "custom-web-application-development"
+      ],
+      "architecture": "Content-led service website",
+      "technologies": [
+        "PHP",
+        "JavaScript",
+        "Bootstrap"
+      ],
+      "screenshots": [
+        {
+          "src": "/assets/img/portfolio/kakubaa/K1.png",
+          "alt": "Kakubaa homepage introducing its student guidance and support services."
+        },
+        {
+          "src": "/assets/img/portfolio/kakubaa/K2.png",
+          "alt": "Kakubaa service information page for students and families."
+        },
+        {
+          "src": "/assets/img/portfolio/kakubaa/K3.png",
+          "alt": "Kakubaa contact and consultation experience."
+        }
+      ],
+      "published": true
+    },
+    {
+      "slug": "sterile-aircare-solutions-corporate-website",
+      "weight": 90,
+      "title": "Sterile Aircare Solutions – Corporate Product Website",
+      "short": "Sterile Aircare",
+      "theme": "industrial",
+      "icon": "shield",
+      "industry": "Pharmaceutical & cleanroom engineering",
+      "categories": [
+        "Healthcare",
+        "Website"
+      ],
+      "description": "A corporate product website for cleanroom, pharmaceutical and controlled-environment engineering solutions.",
+      "features": [
+        "Corporate landing page",
+        "Company and expertise overview",
+        "Product catalogue",
+        "Industry-focused service content",
+        "Team presentation",
+        "Brochure access",
+        "Consultation calls to action",
+        "Contact enquiry flow"
+      ],
+      "problem": "Sterile Aircare Solutions needed a professional digital presence that could explain its technical expertise, showcase products and help pharmaceutical, biotech and healthcare buyers start a consultation.",
+      "solution": "We developed a product-focused corporate website that leads with the company’s controlled-environment expertise and connects visitors to detailed company, product, team and contact information. Prominent brochure and consultation actions support practical buyer next steps.",
+      "contribution": "We developed the responsive company website and structured its product, expertise and enquiry content into a clear business-to-business journey.",
+      "impact": "The website gives prospective customers a focused way to understand the company’s capabilities, explore its solutions and move toward a product or consultation enquiry.",
+      "related_services": [
+        "custom-web-application-development"
+      ],
+      "architecture": "Corporate website + product catalogue",
+      "technologies": [
+        "PHP",
+        "JavaScript",
+        "Bootstrap"
+      ],
+      "screenshots": [
+        {
+          "src": "/assets/img/portfolio/sterileair/S1.png",
+          "alt": "Sterile Aircare Solutions homepage presenting controlled-environment engineering expertise."
+        },
+        {
+          "src": "/assets/img/portfolio/sterileair/S2.png",
+          "alt": "Sterile Aircare Solutions product and capability presentation."
+        },
+        {
+          "src": "/assets/img/portfolio/sterileair/S3.png",
+          "alt": "Sterile Aircare Solutions contact and consultation page."
+        }
+      ],
+      "published": true
+    },
+    {
+      "slug": "smartstock-multi-warehouse-management-concept",
+      "weight": 70,
+      "title": "SmartStock – Multi-Warehouse Inventory Platform",
+      "short": "SmartStock",
+      "theme": "warehouse",
+      "icon": "layers",
+      "industry": "Retail, distribution & warehousing",
+      "categories": [
+        "Laravel",
+        "ERP",
+        "Inventory",
+        "Concept"
+      ],
+      "description": "A concept for multi-location businesses that need a clearer view of stock, purchasing, transfers and fulfilment.",
+      "features": [
+        "Live stock by warehouse and location",
+        "Purchase orders and goods receiving",
+        "Sales orders and dispatch planning",
+        "Inter-warehouse stock transfers",
+        "Barcode-led receiving and picking",
+        "Low-stock and reorder alerts",
+        "Supplier and product management",
+        "Stock movement history and reports"
+      ],
+      "problem": "Growing distributors often manage stock through separate spreadsheets, calls and branch-level records. That makes it difficult to know what is available, what is already committed and where replenishment is needed.",
+      "solution": "The SmartStock concept connects purchasing, receiving, storage, transfers, sales orders and dispatch around a traceable stock ledger. Role-based dashboards would give branch teams a focused workflow while management sees inventory across every location.",
+      "contribution": "We designed this concept case study to demonstrate how we would structure multi-warehouse inventory, operational permissions and traceable stock movements in a custom Laravel application.",
+      "impact": "A system like this could reduce duplicate entry, make stock discrepancies easier to investigate and help teams plan purchasing and fulfilment from a shared operational view.",
+      "related_services": [
+        "inventory-management-system-development",
+        "warehouse-management-system-development",
+        "erp-development"
+      ],
+      "architecture": "Multi-location inventory workflows",
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "Vue.js",
+        "REST APIs"
+      ],
+      "screenshots": [
+        {
+          "src": "/assets/img/portfolio/concepts/smartstock-dashboard.png",
+          "width": 1672,
+          "height": 941,
+          "alt": "Generated SmartStock concept mockup showing multi-warehouse inventory, stock movements and low-stock alerts."
+        }
+      ],
+      "concept": true,
+      "published": true
+    },
+    {
+      "slug": "peopleflow-hrms-payroll-concept",
+      "weight": 65,
+      "title": "PeopleFlow – HRMS, Attendance & Payroll Platform",
+      "short": "PeopleFlow",
+      "theme": "hrms",
+      "icon": "grid",
+      "industry": "Human resources · Growing teams",
+      "categories": [
+        "Laravel",
+        "HRMS",
+        "SaaS",
+        "Concept"
+      ],
+      "description": "A concept HR platform connecting employee records, attendance exceptions, leave approvals and reviewable payroll runs.",
+      "features": [
+        "Employee records and onboarding",
+        "Biometric attendance integration",
+        "Shift and roster management",
+        "Leave, holidays and comp-off workflows",
+        "Timesheets and manager approvals",
+        "Salary structures and payroll runs",
+        "Payslips and employee self-service",
+        "Role-based reports and audit history"
+      ],
+      "problem": "Attendance devices, leave requests, salary spreadsheets and employee documents often live in separate places. HR teams then spend time reconciling exceptions before every payroll run.",
+      "solution": "The PeopleFlow concept creates one reviewable path from employee and shift data through attendance, leave approvals and payroll. Exception queues would help HR resolve missing punches or policy conflicts before salary calculations are finalized.",
+      "contribution": "We designed this concept to show how policy-driven HR workflows, sensitive permissions and payroll review could be translated into a maintainable multi-tenant Laravel product.",
+      "impact": "A platform like this could give employees more self-service access, help managers respond to requests faster and make payroll inputs easier for HR teams to verify.",
+      "related_services": [
+        "hrms-development",
+        "saas-development",
+        "api-development-integration"
+      ],
+      "architecture": "Policy-driven HR SaaS",
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "Livewire",
+        "REST APIs"
+      ],
+      "screenshots": [
+        {
+          "src": "/assets/img/portfolio/concepts/peopleflow-dashboard.png",
+          "width": 1672,
+          "height": 941,
+          "alt": "Generated PeopleFlow concept mockup showing attendance, leave approvals and payroll readiness."
+        }
+      ],
+      "concept": true,
+      "published": true
+    },
+    {
+      "slug": "staypilot-property-management-saas-concept",
+      "weight": 60,
+      "title": "StayPilot – Property Management SaaS",
+      "short": "StayPilot",
+      "theme": "education",
+      "icon": "layers",
+      "industry": "Property rentals & hospitality",
+      "categories": [
+        "Laravel",
+        "SaaS",
+        "CRM",
+        "Concept"
+      ],
+      "description": "A concept SaaS workspace for property enquiries, bookings, tenants, payments, maintenance and owner reporting.",
+      "features": [
+        "Property and unit management",
+        "Lead and enquiry pipeline",
+        "Booking and occupancy calendar",
+        "Tenant profiles and agreements",
+        "Rent, deposits and payment tracking",
+        "Maintenance requests and assignments",
+        "Owner dashboards and statements",
+        "Multi-organization administration"
+      ],
+      "problem": "Property managers can lose visibility when leads, booking calendars, tenant records, maintenance requests and payment follow-ups are handled in different tools.",
+      "solution": "The StayPilot concept brings the customer journey and property operations together. A shared calendar would connect availability and bookings, while tenant, payment and maintenance records stay attached to the relevant unit and organization.",
+      "contribution": "We designed this concept to demonstrate a multi-tenant SaaS architecture, role-based property operations and a joined-up workflow from initial enquiry through ongoing tenancy.",
+      "impact": "A product like this could help property teams respond to enquiries sooner, reduce scheduling conflicts and give owners a clearer view of occupancy, collections and open maintenance work.",
+      "related_services": [
+        "saas-development",
+        "crm-development",
+        "custom-web-application-development"
+      ],
+      "architecture": "Multi-tenant property operations",
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "Vue.js",
+        "Redis"
+      ],
+      "screenshots": [
+        {
+          "src": "/assets/img/portfolio/concepts/staypilot-dashboard.png",
+          "width": 1672,
+          "height": 941,
+          "alt": "Generated StayPilot concept mockup showing occupancy, collections, reservations and maintenance requests."
+        }
+      ],
+      "concept": true,
+      "published": true
+    },
+    {
+      "slug": "tradehub-b2b-dealer-portal-concept",
+      "weight": 55,
+      "title": "TradeHub – B2B Dealer Ordering Portal",
+      "short": "TradeHub",
+      "theme": "crm",
+      "icon": "grid",
+      "industry": "Manufacturing & wholesale distribution",
+      "categories": [
+        "Laravel",
+        "E-commerce",
+        "ERP",
+        "Concept"
+      ],
+      "description": "A concept dealer portal for product pricing, bulk orders, approvals, credit visibility and repeat purchasing.",
+      "features": [
+        "Dealer-specific catalogues and pricing",
+        "Bulk order and quick reorder tools",
+        "Quotation and approval workflows",
+        "Credit-limit and outstanding visibility",
+        "Order status and delivery tracking",
+        "Invoices, statements and document access",
+        "Sales representative dashboards",
+        "ERP and payment integrations"
+      ],
+      "problem": "Manufacturers and wholesalers often receive dealer orders through calls, messages and spreadsheets. Custom pricing, credit checks and approval rules then create extra work before an order can be confirmed.",
+      "solution": "The TradeHub concept gives each dealer a secure ordering workspace with the right catalogue, negotiated pricing and account information. Orders could move through credit and approval checks before connecting to fulfilment and invoicing systems.",
+      "contribution": "We designed this concept to demonstrate how e-commerce convenience can be combined with B2B pricing, permissions, approval workflows and ERP integration requirements.",
+      "impact": "A portal like this could make repeat ordering faster, reduce manual order entry and give dealers and sales teams a shared view of prices, availability and account status.",
+      "related_services": [
+        "custom-web-application-development",
+        "erp-development",
+        "api-development-integration"
+      ],
+      "architecture": "B2B commerce + approval workflows",
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "Vue.js",
+        "REST APIs"
+      ],
+      "screenshots": [
+        {
+          "src": "/assets/img/portfolio/concepts/tradehub-dashboard.png",
+          "width": 1672,
+          "height": 941,
+          "alt": "Generated TradeHub concept mockup showing dealer credit, quick ordering, quotations and delivery status."
+        }
+      ],
+      "concept": true,
+      "published": true
+    }
+  ],
+  "services": [
+    {
+      "slug": "custom-web-application-development",
+      "title": "Software for your daily operations",
+      "description": "Still copying information between spreadsheets? Bring your records, tasks and approvals into one place.",
+      "icon": "code",
+      "features": [
+        "Workflow automation",
+        "Custom dashboards",
+        "User roles and permissions",
+        "Database design",
+        "Responsive interfaces"
+      ],
+      "problem": "Spreadsheets, disconnected tools and repeated data entry can make simple operations difficult to manage.",
+      "approach": "We map the workflow first, define the people and decisions involved, and build a focused application around those requirements. You get a system designed for your operations, with a clear path for future improvements.",
+      "published": true,
+      "seo_title": "Custom web applications"
+    },
+    {
+      "slug": "laravel-development",
+      "title": "Custom Laravel development",
+      "description": "Build a dependable business application, or add the features your existing Laravel software needs.",
+      "icon": "terminal",
+      "features": [
+        "Laravel and PHP",
+        "MySQL architecture",
+        "Authentication and authorization",
+        "Queues and Redis",
+        "Testing and deployment"
+      ],
+      "problem": "A growing application needs more than a collection of features. It needs clear business rules, reliable data and code that can be maintained.",
+      "approach": "We build Laravel applications with explicit validation, scoped permissions and a structured data model. Background work goes into queues, and important workflows are tested before deployment.",
+      "published": true,
+      "seo_title": "Laravel development"
+    },
+    {
+      "slug": "saas-development",
+      "title": "Turn your idea into an online product",
+      "description": "Build a subscription-based product that customers can sign up for and use online (SaaS).",
+      "icon": "layers",
+      "features": [
+        "Multi-tenant architecture",
+        "Subscription billing",
+        "Tenant administration",
+        "Onboarding flows",
+        "Payment integration"
+      ],
+      "problem": "A SaaS product must serve different organizations without mixing their data or making every customer a separate maintenance project.",
+      "approach": "We define the tenant boundary, access rules and subscription model early. I build the core product around a focused first release, with tenant-aware operations and a plan for onboarding, monitoring and growth.",
+      "published": true,
+      "seo_title": "SaaS & multi-tenant platforms"
+    },
+    {
+      "slug": "crm-development",
+      "title": "Customer & sales management",
+      "description": "Keep leads, customer details and follow-up reminders together so your team knows the next step. Often called a CRM.",
+      "icon": "grid",
+      "features": [
+        "Lead management",
+        "Customer records",
+        "Sales pipeline",
+        "Follow-ups and tasks",
+        "Activity history",
+        "Notifications"
+      ],
+      "problem": "When lead information lives in separate spreadsheets and conversations, follow-ups are easy to miss and sales activity is difficult to understand.",
+      "approach": "We bring customer records, ownership and next actions into one workflow. The pipeline reflects your sales process, so the team can see what needs attention without assembling information from multiple tools.",
+      "published": true,
+      "seo_title": "CRM development"
+    },
+    {
+      "slug": "hrms-development",
+      "title": "Staff, attendance & payroll",
+      "description": "Manage employee records, shifts, leave and salary calculations in one connected system (HRMS).",
+      "icon": "grid",
+      "features": [
+        "Employee management",
+        "Biometric attendance",
+        "Leave and comp off",
+        "Shifts and timesheets",
+        "Payroll and salary templates",
+        "Payslips",
+        "Policies and notifications"
+      ],
+      "problem": "Attendance exceptions, changing shifts and different leave policies make payroll preparation time-consuming and difficult to verify.",
+      "approach": "We document policy rules and exception handling before development. Attendance, leave and payroll are connected through reviewable steps, with access controls for employee and salary information.",
+      "published": true,
+      "seo_title": "HRMS & payroll systems"
+    },
+    {
+      "slug": "erp-development",
+      "title": "Connect your business operations",
+      "description": "Bring orders, purchasing, approvals and department records into a shared business system (ERP).",
+      "icon": "layers",
+      "features": [
+        "Operational dashboards",
+        "Connected departments",
+        "Purchasing and orders",
+        "Approval workflows",
+        "Reporting",
+        "Roles and permissions"
+      ],
+      "problem": "Separate departmental tools can create duplicate records and conflicting versions of the same business information.",
+      "approach": "We plan shared entities and ownership with your team, then connect modules incrementally. Explicit approval steps and traceable records help departments work from the same information.",
+      "published": true,
+      "seo_title": "ERP development"
+    },
+    {
+      "slug": "healthcare-management-system-development",
+      "title": "Clinic & healthcare management",
+      "description": "Manage patient enquiries, appointments, billing and staff from one administration system.",
+      "icon": "shield",
+      "features": [
+        "Patients and appointments",
+        "Enquiries",
+        "Billing and invoices",
+        "Expenses",
+        "Staff and services",
+        "Role-based permissions"
+      ],
+      "problem": "A public website may collect enquiries while the operations team handles appointments, billing and staff in disconnected tools.",
+      "approach": "We connect enquiry capture with a purpose-built administration platform. Patient information and operational functions receive scoped permissions, and workflows are designed around the staff who use them.",
+      "published": true,
+      "seo_title": "Healthcare management systems"
+    },
+    {
+      "slug": "inventory-management-system-development",
+      "title": "Stock & order management",
+      "description": "Track products, purchases, sales and stock transfers so your team can see where items are.",
+      "icon": "grid",
+      "features": [
+        "Products and stock",
+        "Warehouses",
+        "Purchase and sales orders",
+        "Barcode management",
+        "Stock transfers",
+        "Stock movement history"
+      ],
+      "problem": "Manual stock updates can leave teams with conflicting counts and little visibility into how inventory changed.",
+      "approach": "We define the stock movement model and validation rules first. Receiving, dispatch and transfers update inventory through recorded transactions so teams can trace adjustments and investigate differences.",
+      "published": true,
+      "seo_title": "Inventory management systems"
+    },
+    {
+      "slug": "warehouse-management-system-development",
+      "title": "Warehouse management",
+      "description": "Organize receiving, storage, picking and stock counts, with barcode support and connections to your other systems.",
+      "icon": "layers",
+      "features": [
+        "Inbound and putaway",
+        "Storage and retrieval",
+        "Inventory tracking",
+        "Cycle counting",
+        "Barcode integration",
+        "ERP and TMS integration"
+      ],
+      "problem": "Warehouse teams need a consistent view of what arrived, where it was stored and what is ready to leave.",
+      "approach": "We build workflows around warehouse locations and inventory movements. Barcode-led steps, cycle counts and integration checkpoints help teams identify exceptions before they spread across connected systems.",
+      "published": true,
+      "seo_title": "Warehouse management systems"
+    },
+    {
+      "slug": "api-development-integration",
+      "title": "Connect your existing software",
+      "description": "Help your tools exchange information, including payments, file storage and other business services (API integration).",
+      "icon": "link",
+      "features": [
+        "REST APIs",
+        "Payment gateways",
+        "AWS S3 integration",
+        "Third-party services",
+        "Webhooks",
+        "Integration monitoring"
+      ],
+      "problem": "Systems that cannot exchange information often leave your team copying records and resolving avoidable mismatches.",
+      "approach": "We design validated APIs and integration flows with clear authentication, failure handling and retry behavior. External responses are checked, and repeated events are handled carefully to avoid duplicate operations.",
+      "published": true,
+      "seo_title": "API development & integration"
+    },
+    {
+      "slug": "laravel-maintenance",
+      "title": "Fix or improve existing software",
+      "description": "Get help with bugs, slow screens and missing features in your existing Laravel application.",
+      "icon": "shield",
+      "features": [
+        "Bug investigation and fixing",
+        "Feature improvements",
+        "Performance review",
+        "Dependency maintenance",
+        "Deployment support",
+        "Codebase review"
+      ],
+      "problem": "An existing Laravel application can accumulate bugs, slow workflows or features that no longer fit the business.",
+      "approach": "We start by reproducing the issue and understanding the affected workflow. Changes stay focused, with regression checks and a deployment plan that accounts for the current application and its users.",
+      "published": true,
+      "seo_title": "Maintenance & improvements"
+    },
+    {
+      "slug": "admin-panel-development",
+      "title": "A control panel for your team",
+      "description": "Give staff a simple way to manage records, review requests and update information, with the right access for each person.",
+      "icon": "grid",
+      "features": [
+        "Operational dashboards",
+        "User management",
+        "Role and permission management",
+        "Search and filters",
+        "Approval screens",
+        "Exports"
+      ],
+      "problem": "Teams need safe, efficient ways to manage application data without relying on a developer for everyday changes.",
+      "approach": "We build admin interfaces around real tasks, with clear validation, permission checks and useful status information. Sensitive changes receive appropriate safeguards and deliberate review steps.",
+      "published": true,
+      "seo_title": "Admin panel development"
+    }
+  ],
+  "posts": [
+    {
+      "slug": "custom-crm-development-cost",
+      "title": "How much does it cost to build a custom CRM?",
+      "category": "CRM",
+      "description": "Understand the decisions that shape a custom CRM estimate, from workflows and integrations to migration and maintenance.",
+      "date": "2026-09-09",
+      "read_time": "3 min read",
+      "sections": [
+        {
+          "heading": "Start with the workflow, not a price list",
+          "body": "A useful CRM estimate begins with how your team finds, qualifies and serves customers. A system for a small team tracking leads and follow-ups is a different project from one connecting sales, support, invoicing and several external services. List the people who will use it, the decisions they make and the records they need. That gives a developer a concrete basis for scope."
+        },
+        {
+          "heading": "What changes the development effort",
+          "body": "Custom pipeline stages, granular permissions, recurring tasks, reporting and approval rules all affect effort. Integrations add another dimension: an API may be straightforward, but handling failures, duplicate events and incomplete data still takes work. Data migration needs its own assessment, especially when existing spreadsheets contain inconsistent names or duplicate customers."
+        },
+        {
+          "heading": "Define a useful first release",
+          "body": "Separate essential workflows from improvements that can follow. A focused first release might include lead capture, customer records, ownership, next actions and a simple pipeline. Advanced automation can follow once the team has used the core workflow. This approach makes scope easier to explain and reduces the risk of investing in features that do not fit everyday work."
+        },
+        {
+          "heading": "Ask for a transparent estimate",
+          "body": "A project proposal should state the included workflows, assumptions, dependencies, acceptance criteria and how changes will be handled. Ask about deployment, migration, training and post-launch support as well as development. A responsible estimate is specific to the project; a universal fixed price would hide too many assumptions."
+        },
+        {
+          "heading": "Prepare for a project discussion",
+          "body": "Bring sample spreadsheets with sensitive information removed, a description of your current sales process and the names of services the CRM must connect with. Explain what is most frustrating today and what a successful first release would change. These inputs are more useful than a long list of features without context."
+        }
+      ],
+      "published": true
+    },
+    {
+      "slug": "custom-software-instead-of-excel",
+      "title": "When your business outgrows spreadsheets",
+      "category": "Business Software",
+      "description": "Recognize when a shared spreadsheet should become a structured application, and how to approach the transition.",
+      "date": "2026-09-09",
+      "read_time": "3 min read",
+      "sections": [
+        {
+          "heading": "Spreadsheets are a useful starting point",
+          "body": "A spreadsheet is a flexible way to explore a process and organize small amounts of information. The question is whether the workflow still fits the tool. If people spend more time reconciling copies, repairing formulas or asking who changed a record than doing the underlying work, it may be time to review the system."
+        },
+        {
+          "heading": "Look for workflow problems",
+          "body": "Repeated entry, unclear ownership, missing approvals and inconsistent access are signs of a process that needs more structure. A custom application can validate inputs, relate records and guide users through defined steps. Software will not resolve unclear business rules by itself, so document those rules before replacing the spreadsheet."
+        },
+        {
+          "heading": "Migrate one process at a time",
+          "body": "Choose a workflow with a clear owner and measurable pain. Clean its source data, define the required fields and agree on the new source of truth. A staged migration lets the team verify the application against familiar records before more processes depend on it. Keep a controlled backup of the original data."
+        },
+        {
+          "heading": "Measure practical outcomes",
+          "body": "Decide what you want to observe after launch: fewer duplicate records, faster retrieval, clearer approvals or less repeated entry. Establish a baseline before migration. This makes the business discussion about actual operational changes rather than a general promise that custom software will save time."
+        }
+      ],
+      "published": true
+    },
+    {
+      "slug": "laravel-for-saas-applications",
+      "title": "Choosing a foundation for your SaaS product",
+      "category": "SaaS Development",
+      "description": "A practical guide to evaluating Laravel for a SaaS application around your team, tenancy model and operating needs.",
+      "date": "2026-09-09",
+      "read_time": "3 min read",
+      "sections": [
+        {
+          "heading": "Choose around the product",
+          "body": "The right technical foundation depends on the product, the team maintaining it and the environment where it will run. For a business application with accounts, forms, permissions and background work, Laravel is one option to evaluate. Avoid choosing a framework only because it appears in a technology comparison."
+        },
+        {
+          "heading": "Make tenant boundaries explicit",
+          "body": "A multi-tenant product needs a deliberate approach to organization identity and data access. Decide how requests identify a tenant, how records are scoped and what administrators can access. Tests should cover cross-tenant access attempts as well as normal workflows. A tenant identifier alone is not a complete isolation strategy."
+        },
+        {
+          "heading": "Design for operations early",
+          "body": "Subscription events, email delivery, imports and external services create work beyond the request-response cycle. Plan retries, observability and handling for repeated events. Think about backups, deployment and support access before the first customer needs them. Operational clarity is part of product quality."
+        },
+        {
+          "heading": "Compare realistic alternatives",
+          "body": "Evaluate alternatives against the same requirements: existing team knowledge, integration needs, hosting constraints and expected maintenance. Build a small representative workflow if a key requirement remains uncertain. This article is a planning guide, not a claim that one framework is faster or better for every SaaS product."
+        }
+      ],
+      "published": true
+    },
+    {
+      "slug": "custom-hrms-employee-management",
+      "title": "What a useful HRMS should do for your team",
+      "category": "HRMS",
+      "description": "Plan an HRMS around employee records, attendance exceptions, leave policies and reviewable payroll inputs.",
+      "date": "2026-09-09",
+      "read_time": "3 min read",
+      "sections": [
+        {
+          "heading": "Connect the employee record",
+          "body": "Employee information becomes more useful when attendance, leave and payroll reference the same person and employment context. Establish which records are authoritative and who can change them. Sensitive information requires careful access rules, and employees may need a different view from managers or payroll administrators."
+        },
+        {
+          "heading": "Write down policy exceptions",
+          "body": "A policy that sounds simple can behave differently across shifts, holidays and partial-day leave. Gather examples from actual operations, including exceptions and corrections. Agree on effective dates for policy changes and how historical records should be treated. These decisions should guide development and acceptance checks."
+        },
+        {
+          "heading": "Make payroll inputs reviewable",
+          "body": "Attendance events should not become unexplained salary numbers. The team needs to understand how attendance, leave and approved adjustments contribute to a payroll run. Provide a deliberate review step and a way to investigate discrepancies before finalization. The exact workflow should reflect the organization’s agreed policies."
+        },
+        {
+          "heading": "Roll out with the people who use it",
+          "body": "Test representative records with HR and payroll staff before relying on the new system. Include overnight shifts, missing punches and changed leave decisions where relevant. A short, controlled parallel review can expose assumptions that ordinary happy-path examples miss."
+        }
+      ],
+      "published": true
+    },
+    {
+      "slug": "warehouse-software-inventory-accuracy",
+      "title": "Better inventory starts with traceable movements",
+      "category": "Business Software",
+      "description": "How warehouse workflows, barcodes and cycle counts support a more reliable view of stock.",
+      "date": "2026-09-09",
+      "read_time": "3 min read",
+      "sections": [
+        {
+          "heading": "Record the movement, not just the balance",
+          "body": "A stock balance says how much should be available; a movement history helps explain why. Receiving, putaway, transfers, retrieval and adjustments should follow defined rules. Record the item, quantity, source, destination and responsible operation as appropriate so discrepancies can be investigated."
+        },
+        {
+          "heading": "Match the physical workflow",
+          "body": "Software steps should reflect how warehouse staff receive, locate and move goods. Barcode integration is useful when identifiers and scanning practices are consistent. Before implementation, check the location model, label conventions and common exceptions with the people doing the work."
+        },
+        {
+          "heading": "Use cycle counts to investigate differences",
+          "body": "Cycle counting helps compare recorded inventory with physical stock in smaller, manageable groups. Define how discrepancies are reviewed and who can approve an adjustment. A count is most useful when the team can trace the transactions that explain a difference and improve the underlying process."
+        },
+        {
+          "heading": "Coordinate connected systems",
+          "body": "ERP and transport integrations need clear ownership of records and events. Decide when a movement is confirmed, how failures are retried and how repeated messages are recognized. Inventory accuracy depends on disciplined workflows and reliable integration behavior; software alone does not guarantee a particular accuracy rate."
+        }
+      ],
+      "published": true
+    },
+    {
+      "slug": "before-building-a-saas-product",
+      "title": "Before you build a SaaS product, answer these questions",
+      "category": "SaaS Development",
+      "description": "Clarify your first customer, core workflow, tenant model and support needs before starting SaaS development.",
+      "date": "2026-09-09",
+      "read_time": "3 min read",
+      "sections": [
+        {
+          "heading": "Who needs the first version?",
+          "body": "Describe a specific customer and the problem they experience today. Understand what they currently use, how often the problem occurs and who decides to adopt a new tool. A focused customer profile makes feature decisions easier and keeps the first release connected to a real workflow."
+        },
+        {
+          "heading": "What is the smallest complete workflow?",
+          "body": "A minimum release should still let a customer finish something useful. Define the beginning, the steps and the outcome of that workflow. Remove features that are interesting but not necessary to complete it. Establish acceptance criteria in language both the business and developer can assess."
+        },
+        {
+          "heading": "How will organizations and access work?",
+          "body": "Decide whether customers are individuals or organizations, how people are invited and which roles they need. Clarify what happens when a user belongs to more than one organization. Tenant boundaries, onboarding and billing are connected product decisions that are expensive to leave ambiguous."
+        },
+        {
+          "heading": "Who will operate and support it?",
+          "body": "Plan the responsibilities for deployment, backups, customer support and changes after launch. Determine what staff need to investigate an issue without unnecessary access to customer data. A SaaS product is an ongoing service, so the first-release plan should include its operation as well as its development."
+        }
+      ],
+      "published": true
+    }
+  ],
+  "technologies": [
+    {
+      "slug": "laravel",
+      "title": "Laravel",
+      "group": "Backend",
+      "description": "Our primary framework for business applications, authorization, validation and background jobs.",
+      "published": true
+    },
+    {
+      "slug": "php",
+      "title": "PHP",
+      "group": "Backend",
+      "description": "The server-side foundation for application logic, integrations and maintainable business rules.",
+      "published": true
+    },
+    {
+      "slug": "rest-apis",
+      "title": "REST APIs",
+      "group": "Backend",
+      "description": "Structured endpoints that connect interfaces, mobile clients and external services.",
+      "published": true
+    },
+    {
+      "slug": "vuejs",
+      "title": "Vue.js",
+      "group": "Frontend",
+      "description": "Interactive application screens and reusable components for day-to-day workflows.",
+      "published": true
+    },
+    {
+      "slug": "javascript",
+      "title": "JavaScript",
+      "group": "Frontend",
+      "description": "Practical interface behavior, form interactions and API-driven experiences.",
+      "published": true
+    },
+    {
+      "slug": "tailwind-css",
+      "title": "Tailwind CSS",
+      "group": "Frontend",
+      "description": "Consistent, responsive interfaces built from a deliberate design system.",
+      "published": true
+    },
+    {
+      "slug": "bootstrap",
+      "title": "Bootstrap",
+      "group": "Frontend",
+      "description": "Reliable interface components when maintaining or extending Bootstrap applications.",
+      "published": true
+    },
+    {
+      "slug": "livewire",
+      "title": "Livewire",
+      "group": "Frontend",
+      "description": "Reactive Laravel interfaces for forms, data tables and administrative workflows.",
+      "published": true
+    },
+    {
+      "slug": "inertiajs",
+      "title": "Inertia.js",
+      "group": "Frontend",
+      "description": "A bridge between Laravel routing and modern frontend application screens.",
+      "published": true
+    },
+    {
+      "slug": "jquery",
+      "title": "jQuery",
+      "group": "Frontend",
+      "description": "Targeted improvements and integration work in existing applications.",
+      "published": true
+    },
+    {
+      "slug": "vite",
+      "title": "Vite",
+      "group": "Frontend",
+      "description": "Fast frontend builds and optimized asset delivery.",
+      "published": true
+    },
+    {
+      "slug": "mysql",
+      "title": "MySQL",
+      "group": "Database",
+      "description": "Relational data models, constraints and queries built around operational requirements.",
+      "published": true
+    },
+    {
+      "slug": "redis",
+      "title": "Redis",
+      "group": "Infrastructure",
+      "description": "Caching and queue infrastructure where application workload calls for it.",
+      "published": true
+    },
+    {
+      "slug": "queues",
+      "title": "Queues",
+      "group": "Infrastructure",
+      "description": "Background processing for notifications, imports and long-running tasks.",
+      "published": true
+    },
+    {
+      "slug": "aws-s3",
+      "title": "AWS S3",
+      "group": "Infrastructure",
+      "description": "Object storage for documents, uploads and other application files.",
+      "published": true
+    },
+    {
+      "slug": "linux-servers",
+      "title": "Linux Servers",
+      "group": "Infrastructure",
+      "description": "Application deployment, environment configuration and operational support.",
+      "published": true
+    },
+    {
+      "slug": "git",
+      "title": "Git",
+      "group": "Infrastructure",
+      "description": "Version control for traceable changes and collaborative development.",
+      "published": true
+    }
+  ],
+  "faqs": [
+    {
+      "slug": "not-technical",
+      "title": "Do I need to understand software to get started?",
+      "answer": "No. Tell us how your business works and what is difficult to manage. You can show us a spreadsheet or describe a repeated task. We will help turn that into a clear list of requirements.",
+      "published": true
+    },
+    {
+      "slug": "remote",
+      "title": "Do you work with clients outside India?",
+      "answer": "Yes. We work remotely with businesses in India and internationally. We agree on communication, review milestones and a practical meeting schedule before starting.",
+      "published": true
+    },
+    {
+      "slug": "existing-projects",
+      "title": "Can you improve an existing Laravel application?",
+      "answer": "Yes. We can investigate bugs, add features, review performance and help with maintenance. We start by understanding the codebase and the affected business workflow.",
+      "published": true
+    },
+    {
+      "slug": "estimate",
+      "title": "How do you estimate a project?",
+      "answer": "We discuss your requirements, priorities, integrations and timeline. we then define the scope and assumptions before preparing a quotation. The initial project discussion is free.",
+      "published": true
+    },
+    {
+      "slug": "complete-system",
+      "title": "Can you handle the complete application?",
+      "answer": "Our work spans backend development, interfaces, database design, APIs and deployment. We agree on the exact responsibilities and deliverables for your project before development begins.",
+      "published": true
+    },
+    {
+      "slug": "support",
+      "title": "What happens after launch?",
+      "answer": "Deployment, handover and support expectations are agreed as part of the project. Ongoing maintenance and new features can be scoped separately as your requirements evolve.",
+      "published": true
+    },
+    {
+      "slug": "timeline",
+      "title": "How long will the project take?",
+      "answer": "The timeline depends on the features, the information we need to move and the tools we need to connect. After our first discussion, we agree on a realistic scope and schedule before development begins.",
+      "published": true
+    },
+    {
+      "slug": "budget-unknown",
+      "title": "Can we talk if I do not have a fixed budget?",
+      "answer": "Yes. Choose “Let’s discuss” on the enquiry form. We can identify the most useful first version and discuss its scope before we prepare a quotation. The initial discussion is free.",
+      "published": true
+    }
+  ],
+  "testimonials": [],
+  "project_categories": [
+    {
+      "slug": "laravel",
+      "title": "Laravel",
+      "published": true
+    },
+    {
+      "slug": "healthcare",
+      "title": "Healthcare",
+      "published": true
+    },
+    {
+      "slug": "hrms",
+      "title": "HRMS",
+      "published": true
+    },
+    {
+      "slug": "website",
+      "title": "Website",
+      "published": true
+    },
+    {
+      "slug": "crm",
+      "title": "CRM",
+      "published": true
+    },
+    {
+      "slug": "erp",
+      "title": "ERP",
+      "published": true
+    },
+    {
+      "slug": "e-commerce",
+      "title": "E-commerce",
+      "published": true
+    },
+    {
+      "slug": "education",
+      "title": "Education",
+      "published": true
+    },
+    {
+      "slug": "inventory",
+      "title": "Inventory",
+      "published": true
+    },
+    {
+      "slug": "saas",
+      "title": "SaaS",
+      "published": true
+    },
+    {
+      "slug": "concept",
+      "title": "Concept",
+      "published": true
+    }
+  ],
+  "blog_categories": [
+    {
+      "slug": "laravel",
+      "title": "Laravel",
+      "published": true
+    },
+    {
+      "slug": "php",
+      "title": "PHP",
+      "published": true
+    },
+    {
+      "slug": "saas-development",
+      "title": "SaaS Development",
+      "published": true
+    },
+    {
+      "slug": "web-development",
+      "title": "Web Development",
+      "published": true
+    },
+    {
+      "slug": "business-software",
+      "title": "Business Software",
+      "published": true
+    },
+    {
+      "slug": "crm",
+      "title": "CRM",
+      "published": true
+    },
+    {
+      "slug": "hrms",
+      "title": "HRMS",
+      "published": true
+    },
+    {
+      "slug": "apis",
+      "title": "APIs",
+      "published": true
+    },
+    {
+      "slug": "software-development",
+      "title": "Software Development",
+      "published": true
+    }
+  ]
+}
