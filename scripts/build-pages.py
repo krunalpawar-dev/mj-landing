@@ -47,15 +47,22 @@ def build():
                 else:
                     raise RuntimeError('PHP renderer did not start.')
 
-                def rewrite(match):
-                    attribute, value = match.groups()
-                    parsed = urlsplit(value)
-                    path = parsed.path
-                    if path in routes and path != '/':
-                        path += '/'
-                    return f'{attribute}="{urlunsplit(("", "", BASE + path, parsed.query, parsed.fragment))}"'
-
                 for route in routes:
+                    destination = ROOT / route.strip('/') / 'index.html' if route != '/' else ROOT / 'index.html'
+
+                    def rewrite(match):
+                        attribute, value = match.groups()
+                        parsed = urlsplit(value)
+                        path = parsed.path
+                        if path == '/':
+                            target = ROOT / 'index.html'
+                        elif path in routes:
+                            target = ROOT / path.strip('/') / 'index.html'
+                        else:
+                            target = ROOT / path.lstrip('/')
+                        relative = os.path.relpath(target, destination.parent).replace('\\', '/')
+                        return f'{attribute}="{urlunsplit(("", "", relative, parsed.query, parsed.fragment))}"'
+
                     with urlopen(local + route) as response:
                         html = response.read().decode('utf-8').replace('\r\n', '\n')
                     if route == '/contact':
@@ -72,7 +79,6 @@ def build():
                     for public_route in sorted(routes, key=len, reverse=True):
                         if public_route != '/':
                             html = html.replace(PUBLIC + public_route + '"', PUBLIC + public_route + '/"')
-                    destination = ROOT / route.strip('/') / 'index.html' if route != '/' else ROOT / 'index.html'
                     destination.parent.mkdir(parents=True, exist_ok=True)
                     destination.write_text(html, encoding='utf-8', newline='\n')
                     # Preserve links shared under the previous project-site path.
@@ -93,6 +99,7 @@ def build():
                     if error.code != 404:
                         raise
                     html = error.read().decode('utf-8').replace('\r\n', '\n')
+                    destination = ROOT / '404.html'
                     html = re.sub(r'(href|src|action)="(/[^"\s]*)"', rewrite, html)
                     (ROOT / '404.html').write_text(html, encoding='utf-8', newline='\n')
             finally:

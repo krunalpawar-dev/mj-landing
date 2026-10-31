@@ -13,7 +13,13 @@ A separate MJ DYNAMIC company website created from the proven portfolio codebase
 
 The copied case studies and service descriptions come from the reference portfolio. Review client names, screenshots and publication permissions before using them on a new public MJ DYNAMIC domain.
 
-## Run locally
+## Open locally without a server
+
+The generated site is portable plain HTML. Double-click `index.html`, or right-click it and choose a browser. Navigation, styles, images and project pages use relative file paths, so the complete site works directly from the folder.
+
+Keep the full folder structure together. Do not move `index.html` away from `assets/`, `about/`, `services/`, `projects/` and the other generated folders.
+
+## Run the PHP development version
 
 Requires PHP 8.2+ with PDO SQLite, mbstring, JSON and sessions. GD and fileinfo are required for screenshot uploads.
 
@@ -21,7 +27,7 @@ Requires PHP 8.2+ with PDO SQLite, mbstring, JSON and sessions. GD and fileinfo 
 php -S 127.0.0.1:8086 router.php
 ```
 
-Open `http://127.0.0.1:8086`. If Herd is configured for this folder, the default application URL is `http://mj-dynamic.test`.
+Open `http://127.0.0.1:8086`. Use this mode only when developing PHP templates, the CMS or the database-backed enquiry workflow. If Herd is configured for this folder, the default application URL is `http://mj-dynamic.test`.
 
 ## Generate the static site
 

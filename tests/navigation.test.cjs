@@ -2,12 +2,17 @@ const {test} = require('node:test');
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const {pathToFileURL} = require('node:url');
 const {JSDOM, VirtualConsole} = require('jsdom');
 const root = path.resolve(__dirname, '..');
 const script = fs.readFileSync(path.join(root, 'assets/js/portfolio.js'), 'utf8');
 const origin = 'http://mj-dynamic.test';
 const tick = () => new Promise(resolve => setTimeout(resolve, 25));
-const pageHTML = pathname => fs.readFileSync(path.join(root, pathname.replace(/^\//, ''), 'index.html'), 'utf8');
+const pageHTML = pathname => {
+  let relative = pathname.replace(/^\//, '');
+  if (!relative || relative.endsWith('/')) relative += 'index.html';
+  return fs.readFileSync(path.join(root, relative), 'utf8');
+};
 
 async function fixture(t, pathname = '/') {
   const errors = [];
@@ -38,6 +43,22 @@ async function fixture(t, pathname = '/') {
   return {w, requests, errors, click, loaded, answer};
 }
 
+test('generated homepage works when index.html is opened directly from disk', async t => {
+  const file = path.join(root, 'index.html');
+  const dom = new JSDOM(fs.readFileSync(file, 'utf8'), {
+    url: pathToFileURL(file).href, runScripts: 'outside-only', pretendToBeVisual: true
+  });
+  t.after(() => dom.window.close());
+  dom.window.eval(script);
+  await tick();
+  const projectLink = dom.window.document.querySelector('#main-nav a[href="projects/index.html"]');
+  const event = new dom.window.MouseEvent('click', {bubbles: true, cancelable: true, button: 0});
+  projectLink.dispatchEvent(event);
+  assert.equal(event.defaultPrevented, false);
+  assert.equal(projectLink.href, pathToFileURL(path.join(root, 'projects', 'index.html')).href);
+  assert.equal(dom.window.document.querySelector('link[rel="stylesheet"]').href, pathToFileURL(path.join(root, 'assets', 'css', 'portfolio.css')).href + '?v=2');
+});
+
 test('experience updates each year and after page navigation', async t => {
   const f = await fixture(t);
   const NativeDate = f.w.Date;
@@ -49,7 +70,7 @@ test('experience updates each year and after page navigation', async t => {
   f.w.document.dispatchEvent(new f.w.Event('visibilitychange'));
   assert.match(f.w.document.querySelector('.hero-proof [data-experience-since]').textContent, /Around 5 years/);
   assert.equal(f.w.document.querySelector('[data-experience-format="count"]').textContent, '~5');
-  const ready = f.loaded(); f.click('#main-nav a[href="/about/"]'); await ready;
+  const ready = f.loaded(); f.click('#main-nav a[href$="about/index.html"]'); await ready;
   assert.match(f.w.document.querySelector('[data-experience-since]').textContent, /around 5 years/);
 });
 
@@ -58,11 +79,11 @@ test('internal navigation keeps the document and updates content, SEO, focus and
   const originalDocument = f.w.document;
   f.w.testMarker = 'same browsing context';
   const ready = f.loaded();
-  assert.equal(f.click('#main-nav a[href="/projects/"]').defaultPrevented, true);
+  assert.equal(f.click('#main-nav a[href$="projects/index.html"]').defaultPrevented, true);
   await ready;
   assert.equal(f.w.document, originalDocument);
   assert.equal(f.w.testMarker, 'same browsing context');
-  assert.equal(f.w.location.pathname, '/projects/');
+  assert.equal(f.w.location.pathname, '/projects/index.html');
   assert.match(f.w.document.querySelector('h1').textContent, /Software for real/);
   assert.equal(f.w.document.querySelector('#main-nav [aria-current="page"]').textContent, 'Projects');
   assert.match(f.w.document.title, /Software Projects/);
@@ -77,13 +98,13 @@ test('internal navigation keeps the document and updates content, SEO, focus and
 
 test('filters and mobile menu work after repeated page swaps; back restores filters and scroll', async t => {
   const f = await fixture(t);
-  let ready = f.loaded(); f.click('#main-nav a[href="/projects/"]'); await ready;
+  let ready = f.loaded(); f.click('#main-nav a[href$="projects/index.html"]'); await ready;
   f.click('[data-filter="HRMS"]');
   assert.equal(f.w.location.search, '?category=HRMS');
   assert.equal(f.w.document.querySelectorAll('.project-card:not([hidden])').length, 2);
   f.w.scrollTo({left: 0, top: 420});
   f.w.dispatchEvent(new f.w.Event('scroll')); await tick();
-  ready = f.loaded(); f.click('#main-nav a[href="/about/"]'); await ready;
+  ready = f.loaded(); f.click('#main-nav a[href$="about/index.html"]'); await ready;
   ready = f.loaded(); f.w.history.back(); await ready;
   assert.equal(f.w.location.search, '?category=HRMS');
   assert.equal(f.w.document.querySelectorAll('.project-card:not([hidden])').length, 2);
@@ -91,13 +112,13 @@ test('filters and mobile menu work after repeated page swaps; back restores filt
   f.click('.menu-toggle');
   assert.equal(f.w.document.querySelector('.menu-toggle').getAttribute('aria-expanded'), 'true');
   ready = f.loaded(); f.w.history.forward(); await ready;
-  assert.equal(f.w.location.pathname, '/about/');
+  assert.equal(f.w.location.pathname, '/about/index.html');
   assert.equal(f.w.document.querySelector('.menu-toggle').getAttribute('aria-expanded'), 'false');
 });
 
 test('contact preselection and branded submission confirmation remain functional', async t => {
   const f = await fixture(t, '/services/crm-development/');
-  const ready = f.loaded(); f.click('a[href="/contact/?service=crm-development"]'); await ready;
+  const ready = f.loaded(); f.click('a[href$="contact/index.html?service=crm-development"]'); await ready;
   const form = f.w.document.querySelector('#inquiry-form');
   assert.equal(form.elements.project_type.value, 'CRM');
   assert.equal(form.action, 'https://formspree.io/f/xdkeodjk');
@@ -117,7 +138,7 @@ test('contact preselection and branded submission confirmation remain functional
   assert.equal(posted.options.headers.Accept, 'application/json');
   assert.equal(posted.options.body.get('email'), 'test@example.test');
   assert.match(f.w.document.querySelector('.success-panel').textContent, /Thank you for getting in touch/);
-  assert.equal(f.w.location.pathname, '/contact/');
+  assert.equal(f.w.location.pathname, '/contact/index.html');
   assert.equal(f.w.document.querySelector('#inquiry-form'), null);
   assert.equal(f.requests.length, 1);
 });
@@ -125,7 +146,7 @@ test('contact preselection and branded submission confirmation remain functional
 test('external links, modified clicks and anchors are not intercepted', async t => {
   const f = await fixture(t, '/about/');
   assert.equal(f.click('a[href^="https://www.linkedin.com"]').defaultPrevented, false);
-  assert.equal(f.click('#main-nav a[href="/projects/"]', {ctrlKey: true}).defaultPrevented, false);
+  assert.equal(f.click('#main-nav a[href$="projects/index.html"]', {ctrlKey: true}).defaultPrevented, false);
   assert.equal(f.click('a[href="#main"]').defaultPrevented, false);
   assert.equal(f.requests.length, 0);
 });
@@ -134,12 +155,12 @@ test('a newer click cancels an older pending navigation', async t => {
   const f = await fixture(t);
   const pending = [];
   f.w.fetch = (url, options) => new Promise(resolve => pending.push({url, options, resolve}));
-  f.click('#main-nav a[href="/projects/"]');
-  f.click('#main-nav a[href="/about/"]');
+  f.click('#main-nav a[href$="projects/index.html"]');
+  f.click('#main-nav a[href$="about/index.html"]');
   assert.equal(pending[0].options.signal.aborted, true);
   const ready = f.loaded(); pending[1].resolve(f.answer(pending[1].url)); await ready;
   pending[0].resolve(f.answer(pending[0].url)); await tick();
-  assert.equal(f.w.location.pathname, '/about/');
+  assert.equal(f.w.location.pathname, '/about/index.html');
   assert.match(f.w.document.querySelector('h1').textContent, /Software shaped around/);
   assert.equal(f.w.document.body.classList.contains('page-loading'), false);
 });
@@ -153,7 +174,7 @@ test('failed requests and incompatible HTML fall back to native navigation', asy
       return f.answer(url, '<html><head><title>Other site</title></head><body>No compatible content</body></html>');
     };
     const oldMain = f.w.document.querySelector('#main');
-    f.click('#main-nav a[href="/projects/"]'); await tick();
+    f.click('#main-nav a[href$="projects/index.html"]'); await tick();
     assert.equal(f.w.document.querySelector('#main'), oldMain);
     assert.equal(f.w.document.body.classList.contains('page-loading'), false);
     // JSDOM records attempts at location.assign instead of navigating externally.

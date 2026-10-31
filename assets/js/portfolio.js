@@ -116,7 +116,10 @@
           confirmation.className = 'success-panel';
           confirmation.setAttribute('role', 'status');
           confirmation.tabIndex = -1;
-          confirmation.innerHTML = '<span class="eyebrow">ENQUIRY SENT</span><h2>Thank you for getting in touch.</h2><p>Your enquiry has been sent successfully. I’ll review your requirements and get back to you using the contact details you provided.</p><p>In the meantime, you can explore the services I offer or return to the homepage.</p><div class="button-row"><a class="button" href="/services/">Explore services ↗</a><a class="button secondary" href="/">Back to home</a></div>';
+          const navigation = [...document.querySelectorAll('#main-nav a')];
+          const servicesURL = navigation.find(link => link.textContent.trim() === 'Services')?.href || 'services/index.html';
+          const homeURL = navigation.find(link => link.textContent.trim() === 'Home')?.href || 'index.html';
+          confirmation.innerHTML = `<span class="eyebrow">ENQUIRY SENT</span><h2>Thank you for getting in touch.</h2><p>Your enquiry has been sent successfully. We’ll review your requirements and get back to you using the contact details you provided.</p><p>In the meantime, you can explore our services or return to the homepage.</p><div class="button-row"><a class="button" href="${servicesURL}">Explore services ↗</a><a class="button secondary" href="${homeURL}">Back to home</a></div>`;
           form.reset();
           form.replaceWith(confirmation);
           if (confirmation.isConnected) {
@@ -143,9 +146,9 @@
   initializePage();
 
   // Admin, legacy documents and unsupported browsers keep native navigation.
-  if (!document.querySelector('.site-header') || !window.fetch || !window.AbortController || !history.pushState) return;
+  if (location.protocol === 'file:' || !document.querySelector('.site-header') || !window.fetch || !window.AbortController || !history.pushState) return;
   const metaSelector = 'meta[name="description"],meta[name="author"],meta[name="robots"],meta[property^="og:"],meta[name^="twitter:"],link[rel="canonical"],script[type="application/ld+json"]';
-  const scriptPath = [...document.scripts].find(script => script.src.includes('/assets/js/portfolio.js'))?.getAttribute('src');
+  const scriptName = 'assets/js/portfolio.js';
   const announcer = document.createElement('div');
   announcer.className = 'navigation-announcement';
   announcer.setAttribute('role', 'status');
@@ -210,8 +213,8 @@
       const main = next.querySelector('#main');
       const header = next.querySelector('.site-header');
       const footer = next.querySelector('.site-footer');
-      const nextScript = [...next.scripts].find(script => script.getAttribute('src')?.includes('/assets/js/portfolio.js'))?.getAttribute('src');
-      if (!main || !header || !footer || !next.title || nextScript !== scriptPath) throw new Error('Incompatible page');
+      const nextScript = [...next.scripts].find(script => script.getAttribute('src')?.split('?')[0].endsWith(scriptName));
+      if (!main || !header || !footer || !next.title || !nextScript) throw new Error('Incompatible page');
       finalURL.hash = url.hash;
       document.querySelector('#main').replaceWith(document.importNode(main, true));
       document.querySelector('.site-header').replaceWith(document.importNode(header, true));
@@ -248,8 +251,7 @@
     if (!link || link.hasAttribute('download') || (link.target && link.target !== '_self') || link.hasAttribute('data-no-navigation')) return;
     const url = new URL(link.href, location.href);
     if (url.origin !== location.origin || !/^https?:$/.test(url.protocol)) return;
-    if (url.pathname !== '/' && !/^\/(about|services|projects|technologies|blog|contact|privacy)(\/|$)/.test(url.pathname)) return;
-    if (/\.[^/]+$/.test(url.pathname)) return;
+    if (url.pathname !== '/' && !url.pathname.endsWith('/index.html')) return;
     if (url.pathname === location.pathname && url.search === location.search && url.hash) {
       cancelNavigation();
       closeMenu();

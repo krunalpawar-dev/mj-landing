@@ -52,8 +52,8 @@ class PagesTests(unittest.TestCase):
                     if target.startswith('#'):
                         self.assertIn(parsed.fragment, page.ids)
                         continue
-                    self.assertTrue(parsed.path.startswith(BASE + '/'), target)
-                    file = ROOT / unquote(parsed.path.removeprefix(BASE + '/'))
+                    file = (path.parent / unquote(parsed.path)).resolve()
+                    self.assertTrue(file == ROOT or ROOT in file.parents, target)
                     if file.is_dir(): file /= 'index.html'
                     self.assertTrue(file.is_file(), target)
         self.assertTrue((ROOT / '.nojekyll').is_file())
@@ -117,8 +117,8 @@ class PagesTests(unittest.TestCase):
         self.assertEqual(sorted(expected_order, key=listing.index), expected_order)
         home = (ROOT / 'index.html').read_text(encoding='utf-8')
         for slug in expected_order[:6]:
-            self.assertIn(f'/projects/{slug}/', home)
-        self.assertNotIn(f'/projects/{expected_order[6]}/', home)
+            self.assertIn(f'projects/{slug}/index.html', home)
+        self.assertNotIn(f'projects/{expected_order[6]}/index.html', home)
         for slug in ['education-management-saas',
                      'crm-business-management-platform', 'hrms-payroll-system', 'warehouse-management-system']:
             for prefix in ['', 'portfolio/']:
