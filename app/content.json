@@ -2,7 +2,7 @@
   "projects": [
     {
       "slug": "medoraops-pharmacy-operations-platform",
-      "weight": 110,
+      "weight": 210,
       "title": "MedoraOps – Pharmacy & Medical Retail Platform",
       "short": "MedoraOps",
       "theme": "medical",
@@ -17,6 +17,10 @@
         "Concept"
       ],
       "concept": true,
+      "hero_image": "/assets/img/portfolio/medoraops/medoraops-pharmacy-operations-hero.webp",
+      "hero_alt": "Connected pharmacy operations platform linking inventory, batch expiry, purchasing, sales, deliveries and workforce planning",
+      "hero_width": 1672,
+      "hero_height": 941,
       "description": "A fictional operations concept for pharmacy and medical retail teams, connecting sales, stock, purchasing, batch expiry, suppliers and workforce administration.",
       "features": [
         "Admin panel: Daily sales and cash-flow overview",
@@ -75,7 +79,7 @@
     },
     {
       "slug": "nexacare-clinic-operations-platform",
-      "weight": 120,
+      "weight": 200,
       "title": "NexaCare – Connected Clinic Operations Platform",
       "short": "NexaCare",
       "theme": "treeva",
@@ -89,6 +93,10 @@
       ],
       "concept": true,
       "description": "A fictional clinic operations concept connecting patient self-service, appointments, care workflows, billing and resource planning in one clear platform.",
+      "hero_image": "/assets/img/portfolio/nexacare/nexacare-clinic-operations-hero.webp",
+      "hero_alt": "Modern clinic operations workspace with an appointment scheduling and resource planning dashboard.",
+      "hero_width": 1672,
+      "hero_height": 941,
       "features": [
         "Website: Patient self-service dashboard",
         "Website: Specialist discovery and appointment booking",
@@ -144,11 +152,15 @@
     },
     {
       "slug": "finserv-crm-business-management-platform",
-      "weight": 115,
+      "weight": 150,
       "title": "FinServ CRM – Customer & Business Management Platform",
       "short": "FinServ CRM",
       "theme": "crm",
       "icon": "grid",
+      "hero_image": "/assets/img/portfolio/crm/finserv-crm-project-hero.webp",
+      "hero_alt": "Connected FinServ CRM dashboard bringing together customer profiles, conversations, follow-ups, tasks, invoices, notifications and financial reporting",
+      "hero_width": 1672,
+      "hero_height": 941,
       "industry": "Financial services · Customer operations",
       "categories": [
         "Laravel",
@@ -200,12 +212,16 @@
     },
     {
       "slug": "ds-shoppy-ecommerce-rewards-platform",
-      "weight": 105,
+      "weight": 140,
       "title": "DS Shoppy – E-commerce & Rewards Platform",
       "short": "DS Shoppy",
       "theme": "commerce",
       "icon": "grid",
       "industry": "Retail · E-commerce",
+      "hero_image": "/assets/img/ds-shoppy-ecommerce-rewards-hero.webp",
+      "hero_alt": "DS Shoppy e-commerce storefront with shopping cart, checkout, cashback rewards and customer referrals",
+      "hero_width": 1672,
+      "hero_height": 941,
       "categories": [
         "Laravel",
         "E-commerce",
@@ -256,7 +272,7 @@
     },
     {
       "slug": "electronics-ecommerce-storefront",
-      "weight": 80,
+      "weight": 110,
       "title": "Electronics Store – Product Discovery E-commerce Website",
       "short": "Electronics Store",
       "theme": "commerce",
@@ -292,6 +308,10 @@
         "JavaScript",
         "Bootstrap"
       ],
+      "hero_image": "/assets/img/portfolio/e-commerce/electronics-ecommerce-storefront-hero.jpg",
+      "hero_alt": "Electronics e-commerce storefront across desktop and mobile with product discovery, filters, ratings, secure checkout and delivery",
+      "hero_width": 1672,
+      "hero_height": 941,
       "screenshots": [
         {
           "src": "/assets/img/portfolio/e-commerce/E1.png",
@@ -310,7 +330,7 @@
     },
     {
       "slug": "kakubaa-student-support-website",
-      "weight": 85,
+      "weight": 100,
       "title": "Kakubaa – Student Support & Guidance Website",
       "short": "Kakubaa",
       "theme": "education",
@@ -321,6 +341,10 @@
         "Website"
       ],
       "description": "A responsive education website presenting academic guidance, student support services and consultation plans in one clear experience.",
+      "hero_image": "/assets/img/portfolio/kakubaa/kakubaa-student-support-hero.webp",
+      "hero_alt": "Responsive student guidance website shown across desktop, tablet and mobile devices with books, graduation, consultation and planning elements",
+      "hero_width": 1672,
+      "hero_height": 941,
       "features": [
         "Student-focused landing page",
         "Academic support services",
@@ -362,7 +386,7 @@
     },
     {
       "slug": "sterile-aircare-solutions-corporate-website",
-      "weight": 90,
+      "weight": 120,
       "title": "Sterile Aircare Solutions – Corporate Product Website",
       "short": "Sterile Aircare",
       "theme": "industrial",
@@ -414,7 +438,7 @@
     },
     {
       "slug": "smartstock-multi-warehouse-management-concept",
-      "weight": 70,
+      "weight": 190,
       "title": "SmartStock – Multi-Warehouse Inventory Platform",
       "short": "SmartStock",
       "theme": "warehouse",
@@ -427,6 +451,10 @@
         "Concept"
       ],
       "description": "A concept for multi-location businesses that need a clearer view of stock, purchasing, transfers and fulfilment.",
+      "hero_image": "/assets/img/portfolio/concepts/smartstock-hero.png",
+      "hero_width": 1672,
+      "hero_height": 941,
+      "hero_alt": "SmartStock inventory dashboard integrated with a modern multi-warehouse distribution operation.",
       "features": [
         "Live stock by warehouse and location",
         "Purchase orders and goods receiving",
@@ -467,7 +495,7 @@
     },
     {
       "slug": "peopleflow-hrms-payroll-concept",
-      "weight": 65,
+      "weight": 170,
       "title": "PeopleFlow – HRMS, Attendance & Payroll Platform",
       "short": "PeopleFlow",
       "theme": "hrms",
@@ -500,6 +528,10 @@
         "api-development-integration"
       ],
       "architecture": "Policy-driven HR SaaS",
+      "hero_image": "/assets/img/portfolio/concepts/peopleflow-hero.webp",
+      "hero_width": 1672,
+      "hero_height": 941,
+      "hero_alt": "HR team reviewing employee attendance and payroll readiness in a bright modern office.",
       "technologies": [
         "Laravel",
         "PHP",
@@ -520,7 +552,7 @@
     },
     {
       "slug": "staypilot-property-management-saas-concept",
-      "weight": 60,
+      "weight": 160,
       "title": "StayPilot – Property Management SaaS",
       "short": "StayPilot",
       "theme": "education",
@@ -560,6 +592,10 @@
         "Vue.js",
         "Redis"
       ],
+      "hero_image": "/assets/img/portfolio/concepts/staypilot-dashboard.png",
+      "hero_alt": "StayPilot property management concept dashboard showing occupancy, collections, reservations and maintenance requests.",
+      "hero_width": 1672,
+      "hero_height": 941,
       "screenshots": [
         {
           "src": "/assets/img/portfolio/concepts/staypilot-dashboard.png",
@@ -573,7 +609,7 @@
     },
     {
       "slug": "tradehub-b2b-dealer-portal-concept",
-      "weight": 55,
+      "weight": 180,
       "title": "TradeHub – B2B Dealer Ordering Portal",
       "short": "TradeHub",
       "theme": "crm",
@@ -613,6 +649,10 @@
         "Vue.js",
         "REST APIs"
       ],
+      "hero_image": "/assets/img/portfolio/concepts/tradehub-hero.webp",
+      "hero_alt": "Wholesale distribution professional using the TradeHub dealer portal from a warehouse dispatch counter.",
+      "hero_width": 1672,
+      "hero_height": 941,
       "screenshots": [
         {
           "src": "/assets/img/portfolio/concepts/tradehub-dashboard.png",
@@ -631,6 +671,10 @@
       "title": "Software for your daily operations",
       "description": "Still copying information between spreadsheets? Bring your records, tasks and approvals into one place.",
       "icon": "code",
+      "hero_image": "/assets/img/custom-web-application-development-hero.webp",
+      "hero_alt": "Connected custom web application dashboard bringing tasks, approvals, customer records, analytics and responsive interfaces into one system",
+      "hero_width": 1672,
+      "hero_height": 941,
       "features": [
         "Workflow automation",
         "Custom dashboards",
@@ -665,6 +709,10 @@
       "title": "Turn your idea into an online product",
       "description": "Build a subscription-based product that customers can sign up for and use online (SaaS).",
       "icon": "layers",
+      "hero_image": "/assets/img/saas-development-hero.jpg",
+      "hero_alt": "Cloud SaaS platform connecting separate customer workspaces with onboarding, subscriptions, permissions, analytics and scalable infrastructure",
+      "hero_width": 1672,
+      "hero_height": 941,
       "features": [
         "Multi-tenant architecture",
         "Subscription billing",
@@ -681,6 +729,10 @@
       "slug": "crm-development",
       "title": "Customer & sales management",
       "description": "Keep leads, customer details and follow-up reminders together so your team knows the next step. Often called a CRM.",
+      "hero_image": "/assets/img/blog/blog-hero-business-systems.webp",
+      "hero_alt": "Connected customer management dashboard and workflow steps for a custom CRM system",
+      "hero_width": 1672,
+      "hero_height": 941,
       "icon": "grid",
       "features": [
         "Lead management",
@@ -700,6 +752,10 @@
       "title": "Staff, attendance & payroll",
       "description": "Manage employee records, shifts, leave and salary calculations in one connected system (HRMS).",
       "icon": "grid",
+      "hero_image": "/assets/img/hrms-development-hero.webp",
+      "hero_alt": "Connected HRMS dashboard for employee records, attendance, shifts, leave approvals, payroll and team notifications",
+      "hero_width": 1672,
+      "hero_height": 941,
       "features": [
         "Employee management",
         "Biometric attendance",
@@ -719,6 +775,10 @@
       "title": "Connect your business operations",
       "description": "Bring orders, purchasing, approvals and department records into a shared business system (ERP).",
       "icon": "layers",
+      "hero_image": "/assets/img/erp-development-hero.webp",
+      "hero_alt": "Connected ERP dashboard bringing sales orders, purchasing, warehouse inventory, department records, approval workflows and financial reporting into one system",
+      "hero_width": 1672,
+      "hero_height": 941,
       "features": [
         "Operational dashboards",
         "Connected departments",
@@ -737,6 +797,10 @@
       "title": "Clinic & healthcare management",
       "description": "Manage patient enquiries, appointments, billing and staff from one administration system.",
       "icon": "shield",
+      "hero_image": "/assets/img/healthcare-management-system-development-hero.jpg",
+      "hero_alt": "Connected clinic management dashboard for patient records, appointments, healthcare services, billing, staff coordination and role-based security",
+      "hero_width": 1672,
+      "hero_height": 941,
       "features": [
         "Patients and appointments",
         "Enquiries",
@@ -755,6 +819,10 @@
       "title": "Stock & order management",
       "description": "Track products, purchases, sales and stock transfers so your team can see where items are.",
       "icon": "grid",
+      "hero_image": "/assets/img/inventory-management-system-development-hero.webp",
+      "hero_alt": "Inventory management dashboard connected to product boxes, barcode scanning, warehouse shelves, purchase orders, stock transfers and low-stock alerts",
+      "hero_width": 1672,
+      "hero_height": 941,
       "features": [
         "Products and stock",
         "Warehouses",
@@ -772,6 +840,10 @@
       "slug": "warehouse-management-system-development",
       "title": "Warehouse management",
       "description": "Organize receiving, storage, picking and stock counts, with barcode support and connections to your other systems.",
+      "hero_image": "/assets/img/blog/warehouse-software-inventory-accuracy.jpg",
+      "hero_alt": "Modern warehouse with barcode scanning, tracked stock movements and storage locations",
+      "hero_width": 1672,
+      "hero_height": 941,
       "icon": "layers",
       "features": [
         "Inbound and putaway",
@@ -791,6 +863,10 @@
       "title": "Connect your existing software",
       "description": "Help your tools exchange information, including payments, file storage and other business services (API integration).",
       "icon": "link",
+      "hero_image": "/assets/img/api-development-integration-hero.webp",
+      "hero_alt": "Secure API gateway connecting payments, cloud storage, customer records, databases, webhooks and third-party services",
+      "hero_width": 1672,
+      "hero_height": 941,
       "features": [
         "REST APIs",
         "Payment gateways",
@@ -827,6 +903,10 @@
       "title": "A control panel for your team",
       "description": "Give staff a simple way to manage records, review requests and update information, with the right access for each person.",
       "icon": "grid",
+      "hero_image": "/assets/img/admin-panel-development-hero.webp",
+      "hero_alt": "Administrative dashboard connected to user management, role-based permissions, approval workflows, search filters, reports and audit history",
+      "hero_width": 1672,
+      "hero_height": 941,
       "features": [
         "Operational dashboards",
         "User management",
@@ -849,6 +929,10 @@
       "description": "Understand the decisions that shape a custom CRM estimate, from workflows and integrations to migration and maintenance.",
       "date": "2026-09-09",
       "read_time": "3 min read",
+      "image": "/assets/img/blog/custom-crm-development-cost.jpg",
+      "image_alt": "Custom CRM planning workspace with pipeline stages, integrations, scope checklist and estimate calculator",
+      "image_width": 1672,
+      "image_height": 941,
       "sections": [
         {
           "heading": "Start with the workflow, not a price list",
@@ -880,6 +964,10 @@
       "description": "Recognize when a shared spreadsheet should become a structured application, and how to approach the transition.",
       "date": "2026-09-09",
       "read_time": "3 min read",
+      "image": "/assets/img/blog/custom-software-instead-of-excel.jpg",
+      "image_alt": "Scattered business spreadsheets transforming into one structured and connected software system",
+      "image_width": 1672,
+      "image_height": 941,
       "sections": [
         {
           "heading": "Spreadsheets are a useful starting point",
@@ -907,6 +995,10 @@
       "description": "A practical guide to evaluating Laravel for a SaaS application around your team, tenancy model and operating needs.",
       "date": "2026-09-09",
       "read_time": "3 min read",
+      "image": "/assets/img/blog/laravel-for-saas-applications.jpg",
+      "image_alt": "Layered SaaS application foundation connecting tenants, permissions, subscriptions, APIs and monitoring",
+      "image_width": 1672,
+      "image_height": 941,
       "sections": [
         {
           "heading": "Choose around the product",
@@ -934,6 +1026,10 @@
       "description": "Plan an HRMS around employee records, attendance exceptions, leave policies and reviewable payroll inputs.",
       "date": "2026-09-09",
       "read_time": "3 min read",
+      "image": "/assets/img/blog/custom-hrms-employee-management.jpg",
+      "image_alt": "Connected HRMS workspace for employee records, attendance, leave, payroll and role-based access",
+      "image_width": 1672,
+      "image_height": 941,
       "sections": [
         {
           "heading": "Connect the employee record",
@@ -961,6 +1057,10 @@
       "description": "How warehouse workflows, barcodes and cycle counts support a more reliable view of stock.",
       "date": "2026-09-09",
       "read_time": "3 min read",
+      "image": "/assets/img/blog/warehouse-software-inventory-accuracy.jpg",
+      "image_alt": "Modern warehouse showing barcode scanning, stock movements, storage locations and cycle counting",
+      "image_width": 1672,
+      "image_height": 941,
       "sections": [
         {
           "heading": "Record the movement, not just the balance",
@@ -988,6 +1088,10 @@
       "description": "Clarify your first customer, core workflow, tenant model and support needs before starting SaaS development.",
       "date": "2026-09-09",
       "read_time": "3 min read",
+      "image": "/assets/img/blog/before-building-a-saas-product.jpg",
+      "image_alt": "SaaS product planning board covering customers, core workflows, tenant roles, support and release roadmap",
+      "image_width": 1672,
+      "image_height": 941,
       "sections": [
         {
           "heading": "Who needs the first version?",
@@ -1004,6 +1108,80 @@
         {
           "heading": "Who will operate and support it?",
           "body": "Plan the responsibilities for deployment, backups, customer support and changes after launch. Determine what staff need to investigate an issue without unnecessary access to customer data. A SaaS product is an ongoing service, so the first-release plan should include its operation as well as its development."
+        }
+      ],
+      "published": true
+    },
+    {
+      "slug": "free-online-tools-for-everyday-work",
+      "title": "Free online tools for everyday digital work",
+      "category": "Business Software",
+      "description": "Discover ToolKitHub by MJ DYNAMIC, a growing collection of free browser-based tools for documents, images, data, development and everyday tasks.",
+      "date": "2026-11-12",
+      "read_time": "4 min read",
+      "image": "/assets/img/blog/free-online-tools-toolkit-hub.jpg",
+      "image_alt": "Digital workspace presenting free online utilities for PDFs, images, spreadsheets, code, text, QR codes and file conversion",
+      "image_width": 1672,
+      "image_height": 941,
+      "external_url": "https://tools.mjdynamic.in/",
+      "external_label": "Explore free tools on ToolKitHub",
+      "sections": [
+        {
+          "heading": "Small digital tasks should not need complicated software",
+          "body": "Everyday work often includes a quick task: combine a PDF, resize an image, clean a block of text, convert spreadsheet data or generate a QR code. Installing a large application or creating an account can take longer than the task itself. ToolKitHub by MJ DYNAMIC brings focused utilities together in one browser-based collection so people can find a suitable tool and get on with their work."
+        },
+        {
+          "heading": "One toolbox for different kinds of work",
+          "body": "The collection covers PDF and document tasks, image tools, spreadsheet and data conversion, developer utilities, text tools and generators. That range makes ToolKitHub useful for students, office teams, developers, business owners and anyone handling routine digital files. Tools are grouped by category and can be searched by name, making the site easier to explore as the collection grows."
+        },
+        {
+          "heading": "Designed for quick access",
+          "body": "ToolKitHub is available from a phone, tablet or computer. The experience is built around a simple idea: open the tool, complete the task and continue with your day. Clear categories and focused screens reduce the steps between identifying a need and producing a result."
+        },
+        {
+          "heading": "Check important outputs before using them",
+          "body": "A convenient utility still needs thoughtful use. Review converted files, confirm image quality, validate generated codes and keep a backup when changing an important document. Avoid placing confidential or sensitive information into any online service unless you understand how that service processes it. The tool can make a task faster, while the user remains responsible for checking the result."
+        },
+        {
+          "heading": "A growing MJ DYNAMIC product",
+          "body": "ToolKitHub is a digital product by MJ DYNAMIC and will continue to grow around useful, practical tasks. Visit the platform when you need a quick utility, browse the available categories and return as new tools are added."
+        }
+      ],
+      "published": true
+    },
+    {
+      "slug": "practical-webinars-with-mj-dynamic-learn",
+      "title": "Keep learning with practical MJ DYNAMIC webinars",
+      "category": "Learning",
+      "description": "Learn how MJ DYNAMIC conducts webinars from time to time on practical topics, emerging technology, skills and career development.",
+      "date": "2026-11-12",
+      "read_time": "4 min read",
+      "image": "/assets/img/blog/mj-dynamic-learning-webinars.jpg",
+      "image_alt": "Online webinar workspace with a live presenter, audience, calendar, microphone, learning resources, technology and career symbols",
+      "image_width": 1672,
+      "image_height": 941,
+      "external_url": "https://learn.mjdynamic.in/",
+      "external_label": "Visit MJ DYNAMIC Learn",
+      "sections": [
+        {
+          "heading": "Learning needs change as the world changes",
+          "body": "New technology, workplace expectations and career paths can change quickly. A useful learning session should help people understand what is changing, why it matters and what they can do next. MJ DYNAMIC Learn is the company’s platform for webinars conducted from time to time on practical topics that support students, professionals and curious learners."
+        },
+        {
+          "heading": "Different topics, one practical purpose",
+          "body": "The webinar subject may change with current needs. Sessions can explore technology, career preparation, digital skills and other useful themes. The current programme focuses on the future of careers in the age of AI, including how artificial intelligence may affect work, which skills remain relevant, how to build a career roadmap and how to use AI effectively. Future sessions can address different topics as new questions emerge."
+        },
+        {
+          "heading": "A webinar creates space for explanation",
+          "body": "Short posts can introduce an idea, but a webinar gives a speaker time to connect the details and show how they apply in real situations. Participants can follow a structured discussion, consider examples and bring questions to the session. This makes the format useful for topics that benefit from context rather than a list of quick tips."
+        },
+        {
+          "heading": "Prepare before joining",
+          "body": "Read the session outline, note what you want to understand and write down one or two questions before the webinar begins. During the session, focus on the ideas most relevant to your goals. Afterwards, turn the learning into a small action: research a skill, update a plan, test a tool or discuss the topic with someone in your field."
+        },
+        {
+          "heading": "Watch for the next session",
+          "body": "MJ DYNAMIC Learn is the place to find the current webinar and future learning opportunities. Topics and schedules may change, so visit the platform for the latest session details, speaker information and registration options."
         }
       ],
       "published": true
@@ -1282,6 +1460,11 @@
     {
       "slug": "software-development",
       "title": "Software Development",
+      "published": true
+    },
+    {
+      "slug": "learning",
+      "title": "Learning",
       "published": true
     }
   ]

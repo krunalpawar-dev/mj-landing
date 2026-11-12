@@ -1,7 +1,6 @@
 (() => {
   'use strict';
   let renderedURL = location.href;
-  const serviceTypes = {'custom-web-application-development':'Web Application','laravel-development':'Web Application','saas-development':'SaaS Platform','crm-development':'CRM','hrms-development':'HRMS','erp-development':'ERP','healthcare-management-system-development':'Healthcare System','inventory-management-system-development':'Inventory System','warehouse-management-system-development':'Warehouse System','api-development-integration':'API Integration','laravel-maintenance':'Existing Project Improvement','admin-panel-development':'Web Application'};
 
   function closeMenu() {
     const toggle = document.querySelector('.menu-toggle');
@@ -42,13 +41,12 @@
   function initializePage() {
     updateExperience();
     const params = new URLSearchParams(location.search);
+    document.querySelectorAll('[data-utm]').forEach(field => { field.value = params.get(field.dataset.utm) || ''; });
     document.querySelectorAll('[data-filter-form]').forEach(form => {
       const value = params.get('category') || 'All';
       if ([...form.querySelectorAll('[data-filter]')].some(button => button.dataset.filter === value)) applyFilter(form, value);
     });
     const inquiry = document.querySelector('#inquiry-form');
-    const selectedService = serviceTypes[params.get('service')];
-    if (inquiry && selectedService) inquiry.elements.project_type.value = selectedService;
     const submit = inquiry?.querySelector('[type=submit]');
     if (submit?.disabled && !inquiry.dataset.sending) {
       submit.disabled = false;
@@ -108,7 +106,7 @@
           });
           const result = await response.json();
           if (!response.ok || result.ok === false || result.errors) {
-            status.textContent = 'Your enquiry could not be submitted. Please check your details and try again, or contact me by email or WhatsApp.';
+            status.textContent = form.dataset.failMessage || 'Your enquiry could not be submitted. Please check your details and try again, or contact me by email or WhatsApp.';
             if (form.isConnected) status.focus();
             return;
           }
@@ -116,10 +114,14 @@
           confirmation.className = 'success-panel';
           confirmation.setAttribute('role', 'status');
           confirmation.tabIndex = -1;
-          const navigation = [...document.querySelectorAll('#main-nav a')];
-          const servicesURL = navigation.find(link => link.textContent.trim() === 'Services')?.href || 'services/index.html';
-          const homeURL = navigation.find(link => link.textContent.trim() === 'Home')?.href || 'index.html';
-          confirmation.innerHTML = `<span class="eyebrow">ENQUIRY SENT</span><h2>Thank you for getting in touch.</h2><p>Your enquiry has been sent successfully. We’ll review your requirements and get back to you using the contact details you provided.</p><p>In the meantime, you can explore our services or return to the homepage.</p><div class="button-row"><a class="button" href="${servicesURL}">Explore services ↗</a><a class="button secondary" href="${homeURL}">Back to home</a></div>`;
+          if (form.hasAttribute('data-lead-form')) {
+            confirmation.innerHTML = '<span class="eyebrow">REQUEST RECEIVED</span><h2>Thanks for reaching out.</h2><p>Your details have been sent securely. We’ll review your request and follow up using the contact details you provided.</p>';
+          } else {
+            const navigation = [...document.querySelectorAll('#main-nav a')];
+            const servicesURL = navigation.find(link => link.textContent.trim() === 'Services')?.href || 'services/index.html';
+            const homeURL = navigation.find(link => link.textContent.trim() === 'Home')?.href || 'index.html';
+            confirmation.innerHTML = `<span class="eyebrow">ENQUIRY SENT</span><h2>Thank you for getting in touch.</h2><p>Your enquiry has been sent successfully. We’ll review your requirements and get back to you using the contact details you provided.</p><p>In the meantime, you can explore our services or return to the homepage.</p><div class="button-row"><a class="button" href="${servicesURL}">Explore services ↗</a><a class="button secondary" href="${homeURL}">Back to home</a></div>`;
+          }
           form.reset();
           form.replaceWith(confirmation);
           if (confirmation.isConnected) {
@@ -127,7 +129,7 @@
             confirmation.scrollIntoView({block: 'center', behavior: 'smooth'});
           }
         } catch {
-          status.textContent = 'We couldn’t confirm whether your enquiry was sent. Your details are still here. Please check your connection and try again, or contact me by email or WhatsApp.';
+          status.textContent = form.dataset.failMessage || 'We couldn’t confirm whether your enquiry was sent. Your details are still here. Please check your connection and try again, or contact me by email or WhatsApp.';
           if (form.isConnected) status.focus();
         } finally {
           window.clearTimeout(timeout);

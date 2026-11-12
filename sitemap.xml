@@ -4,7 +4,6 @@
 <url><loc>http://mj-dynamic.test/about/</loc></url>
 <url><loc>http://mj-dynamic.test/services/</loc></url>
 <url><loc>http://mj-dynamic.test/projects/</loc></url>
-<url><loc>http://mj-dynamic.test/technologies/</loc></url>
 <url><loc>http://mj-dynamic.test/blog/</loc></url>
 <url><loc>http://mj-dynamic.test/contact/</loc></url>
 <url><loc>http://mj-dynamic.test/privacy/</loc></url>
@@ -37,4 +36,6 @@
 <url><loc>http://mj-dynamic.test/blog/custom-hrms-employee-management/</loc></url>
 <url><loc>http://mj-dynamic.test/blog/warehouse-software-inventory-accuracy/</loc></url>
 <url><loc>http://mj-dynamic.test/blog/before-building-a-saas-product/</loc></url>
+<url><loc>http://mj-dynamic.test/blog/free-online-tools-for-everyday-work/</loc></url>
+<url><loc>http://mj-dynamic.test/blog/practical-webinars-with-mj-dynamic-learn/</loc></url>
 </urlset>

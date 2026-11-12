@@ -2,7 +2,8 @@
 declare(strict_types=1);
 return [
     'name' => 'MJ DYNAMIC',
-    'email' => getenv('CONTACT_EMAIL') ?: 'kmpawar0004@gmail.com',
+    'email' => getenv('CONTACT_EMAIL') ?: 'mjdynamic.helpdesk@gmail.com',
+    'helpdesk_email' => getenv('HELPDESK_EMAIL') ?: 'mjdynamic.helpdesk@gmail.com',
     'phone' => '+91 63517 16007',
     'phone_uri' => '+916351716007',
     'resume_url' => '',

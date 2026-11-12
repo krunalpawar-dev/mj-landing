@@ -33,6 +33,17 @@ function projects_by_weight(): array {
 }
 function icon(string $name, string $class = ''): string {
     $paths = ['arrow'=>'<path d="M5 12h14m-6-6 6 6-6 6"/>','diagonal'=>'<path d="M6 18 18 6M6 6h12v12"/>','code'=>'<path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-14-2 18"/>','layers'=>'<path d="m12 3 10 5-10 5L2 8Zm-10 9 10 5 10-5M2 16l10 5 10-5"/>','grid'=>'<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>','link'=>'<path d="m10 13 4-4m-6 7-2 2a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0m4 8 4-4a4 4 0 0 0-6-6l-2 2" transform="translate(2 0)"/>','check'=>'<path d="m5 12 4 4L19 6"/>','globe'=>'<circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3 12h18"/>','mail'=>'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/>','menu'=>'<path d="M4 7h16M4 12h16M4 17h16"/>','shield'=>'<path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6Z"/><path d="m8 12 3 3 5-5"/>','terminal'=>'<path d="m5 7 5 5-5 5m8 0h6"/>','clock'=>'<circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/>'];
+    $paths += [
+        'chat'=>'<path d="M21 11.5a8 8 0 0 1-8.5 8A9 9 0 0 1 8 18l-5 2 1.7-4.2A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8 10h8M8 14h5"/>',
+        'plan'=>'<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4.5V3h6v1.5M9 9h6M9 13h6M9 17h4"/>',
+        'prototype'=>'<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 9v11M6 6.5h.01M9 6.5h.01"/>',
+        'test'=>'<path d="M9 3h6l1 3h3v15H5V6h3Z"/><path d="m8 13 2 2 5-5M9 6h6"/>',
+        'rocket'=>'<path d="M14 5c2.2-2.2 5-2 5-2s.2 2.8-2 5l-5.5 5.5-4-4Z"/><path d="m9 8-4 .5L3 12l5 1m5-1 1 5-3.5 2-1-4M6 16l-2 2m4-1-3 3"/><circle cx="15.5" cy="6.5" r="1.5"/>',
+        'phone'=>'<path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.7 19.7 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c1 .4 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/>',
+        'whatsapp'=>'<path d="M21 11.5a8.7 8.7 0 0 1-9 8.5 9.4 9.4 0 0 1-4-1l-5 1.5 1.6-4.6A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8.3 7.8c.4-.4.8-.2 1 .2l1 2-1 1c.8 1.6 1.9 2.7 3.5 3.5l1-1 2 1c.5.2.6.6.2 1-1 1.2-2.6 1.4-4.7.3-2.2-1.1-4-2.9-5-5-1-2.1-.8-3.6.3-4.7"/>',
+        'broadcast'=>'<circle cx="12" cy="12" r="2"/><path d="M8.5 8.5a5 5 0 0 0 0 7M15.5 8.5a5 5 0 0 1 0 7M5.5 5.5a9 9 0 0 0 0 13M18.5 5.5a9 9 0 0 1 0 13"/>',
+        'instagram'=>'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/>'
+    ];
     return '<svg class="icon '.e($class).'" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">'.($paths[$name] ?? $paths['code']).'</svg>';
 }
 function start_session(): void {
@@ -55,7 +66,7 @@ function send_lead_email(array $lead): bool {
     global $config;
     if (!$config['mail_enabled'] || !filter_var($config['mail_from'], FILTER_VALIDATE_EMAIL)) return false;
     $body="New project enquiry #".$lead['id']."\n\n";
-    foreach (['name','company','email','phone','project_type','budget','description','contact_method'] as $key) $body.=ucwords(str_replace('_',' ',$key)).': '.$lead[$key]."\n\n";
+    foreach (['name','email','phone','description'] as $key) $body.=ucwords(str_replace('_',' ',$key)).': '.$lead[$key]."\n\n";
     $headers=['From'=>$config['mail_from'],'Content-Type'=>'text/plain; charset=UTF-8'];
     if (!empty($lead['email'])) $headers['Reply-To']=$lead['email'];
     return @mail($config['email'], 'New portfolio project enquiry #'.$lead['id'], $body, $headers);

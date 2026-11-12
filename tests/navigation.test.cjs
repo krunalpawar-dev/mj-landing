@@ -57,7 +57,7 @@ test('generated homepage works when index.html is opened directly from disk', as
   projectLink.dispatchEvent(event);
   assert.equal(event.defaultPrevented, false);
   assert.equal(projectLink.href, new URL('projects/', pathToFileURL(file)).href);
-  assert.equal(dom.window.document.querySelector('link[rel="stylesheet"]').href, pathToFileURL(path.join(root, 'assets', 'css', 'portfolio.css')).href + '?v=2');
+  assert.equal(dom.window.document.querySelector('link[rel="stylesheet"]').href, pathToFileURL(path.join(root, 'assets', 'css', 'portfolio.css')).href + '?v=8');
 });
 
 test('experience claim remains consistent after page navigation', async t => {
@@ -116,11 +116,14 @@ test('filters and mobile menu work after repeated page swaps; back restores filt
   assert.equal(f.w.document.querySelector('.menu-toggle').getAttribute('aria-expanded'), 'false');
 });
 
-test('contact preselection and branded submission confirmation remain functional', async t => {
+test('simplified contact form and branded submission confirmation remain functional', async t => {
   const f = await fixture(t, '/services/crm-development/');
-  const ready = f.loaded(); f.click('a[href$="contact/?service=crm-development"]'); await ready;
+  const ready = f.loaded(); f.click('.page-heading a[href$="contact/"]'); await ready;
   const form = f.w.document.querySelector('#inquiry-form');
-  assert.equal(form.elements.project_type.value, 'CRM');
+  assert.equal(form.elements.namedItem('company'), null);
+  assert.equal(form.elements.namedItem('project_type'), null);
+  assert.equal(form.elements.namedItem('budget'), null);
+  assert.equal(form.elements.namedItem('contact_method'), null);
   assert.equal(form.action, 'https://formspree.io/f/xdkeodjk');
   form.elements.name.value = 'Test Name';
   form.elements.email.value = 'test@example.test';
@@ -145,7 +148,7 @@ test('contact preselection and branded submission confirmation remain functional
 
 test('external links, modified clicks and anchors are not intercepted', async t => {
   const f = await fixture(t, '/about/');
-  assert.equal(f.click('a[href^="https://www.linkedin.com"]').defaultPrevented, false);
+  assert.equal(f.click('a[href^="https://wa.me/"]').defaultPrevented, false);
   assert.equal(f.click('#main-nav a[href$="projects/"]', {ctrlKey: true}).defaultPrevented, false);
   assert.equal(f.click('a[href="#main"]').defaultPrevented, false);
   assert.equal(f.requests.length, 0);

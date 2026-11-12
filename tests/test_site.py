@@ -105,7 +105,7 @@ class SiteTests(unittest.TestCase):
         return {'csrf': token, 'name': 'Integration Test', 'company': 'Test company', 'email': 'nobody@example.test', 'phone': '+919000000001', 'project_type': 'CRM', 'budget': 'Let’s discuss', 'description': 'A test CRM enquiry used only by the isolated integration suite.', 'contact_method': 'Email', 'consent': 'yes', 'website': ''}
 
     def test_public_routes_metadata_links_and_sitemap(self):
-        routes = ['/', '/about', '/services', '/projects', '/technologies', '/blog', '/contact', '/privacy']
+        routes = ['/', '/about', '/services', '/projects', '/blog', '/contact', '/privacy']
         for collection, prefix in [('projects','projects'), ('services','services'), ('posts','blog')]:
             routes += [f'/{prefix}/{item["slug"]}' for item in self.seed[collection]]
         titles, descriptions, links = set(), set(), set()
@@ -128,6 +128,9 @@ class SiteTests(unittest.TestCase):
                 if route.startswith('/blog/'):
                     self.assertIn('Article', types)
                     self.assertIn('In this article', html)
+                    self.assertIn('property="og:image"', html)
+                    self.assertIn('name="twitter:card" content="summary_large_image"', html)
+                    self.assertIn('class="blog-page-hero article-page-hero"', html)
                 if route.startswith('/services/'):
                     self.assertIn('Service', types)
                 if route.startswith('/projects/'):
@@ -143,14 +146,14 @@ class SiteTests(unittest.TestCase):
         self.assertEqual(status, 200)
         root = ET.fromstring(xml)
         sitemap_urls = {el.text for el in root.iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')}
-        self.assertEqual(len(sitemap_urls), 36)
+        self.assertEqual(len(sitemap_urls), 37)
         self.assertTrue({self.origin + r for r in routes if r != '/privacy'} <= sitemap_urls)
         _, robots, _ = self.request('/robots.txt')
         self.assertIn('Disallow: /admin', robots)
         self.assertIn(self.origin + '/sitemap.xml', robots)
 
     def test_missing_private_and_legacy_routes(self):
-        for path in ['/missing-page', '/app/content.json', '/scripts/create-admin.php', '/.git/config', '/tests/test_site.py', '/media/not-an-image.webp']:
+        for path in ['/missing-page', '/technologies', '/app/content.json', '/scripts/create-admin.php', '/.git/config', '/tests/test_site.py', '/media/not-an-image.webp']:
             with self.subTest(path=path):
                 status, html, _ = self.request(path)
                 self.assertEqual(status, 404)
@@ -166,8 +169,9 @@ class SiteTests(unittest.TestCase):
         _, html, _ = self.request('/blog?category=PHP')
         self.assertIn('No articles in this category yet', html)
         self.assertIn('aria-pressed="true">PHP', html)
-        _, html, _ = self.request('/contact?service=crm-development')
-        self.assertIn('<option value="CRM" selected>Customers, sales &amp; follow-ups</option>', html)
+        _, html, _ = self.request('/contact')
+        for field in ['company', 'project_type', 'budget', 'contact_method']:
+            self.assertNotIn(f'name="{field}"', html)
 
     def test_enquiry_with_only_name_and_phone(self):
         _, html, _ = self.request('/contact')

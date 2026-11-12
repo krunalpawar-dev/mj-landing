@@ -24,7 +24,7 @@ FORM = 'https://formspree.io/f/xdkeodjk'  # Same endpoint as the original live p
 
 def build():
     data = json.loads((ROOT / 'app/content.json').read_text(encoding='utf-8'))
-    routes = ['/', '/about', '/services', '/projects', '/technologies', '/blog', '/contact', '/privacy']
+    routes = ['/', '/about', '/services', '/projects', '/blog', '/contact', '/privacy', '/software-consultation']
     for collection, prefix in [('projects', 'projects'), ('services', 'services'), ('posts', 'blog')]:
         routes += [f'/{prefix}/{row["slug"]}' for row in data[collection] if row.get('published', True)]
     php = subprocess.check_output([shutil.which('php'), '-r', 'echo PHP_BINARY;'], text=True).strip()
@@ -74,6 +74,10 @@ def build():
                         html = html.replace('name="website"', 'name="_gotcha"')
                         html = html.replace('<div class="form-grid">', '<input type="hidden" name="_subject" value="New portfolio project enquiry"><div class="form-grid">', 1)
                         html = html.replace('No obligation. Just a useful first conversation.', 'Your enquiry is securely submitted through Formspree. No obligation—just a useful first conversation.')
+                    if route == '/software-consultation':
+                        html = html.replace('action="/software-consultation"', f'action="{FORM}"')
+                        html = html.replace('name="website"', 'name="_gotcha"')
+                        html = html.replace('<meta name="robots" content="index, follow">', '<meta name="robots" content="noindex, follow">')
                     if route == '/privacy':
                         html = html.replace('Enquiries are stored in a private application database. A notification may also be sent to the project team’s email account. Hosting and email providers process this information as needed to operate those services.', 'This static website sends enquiries to Formspree. Formspree processes your submission for delivery to the MJ DYNAMIC team. Static hosting does not run the private application database or content manager. You can also contact the team directly by email or WhatsApp.')
                         html = html.replace('The contact form and content manager use an essential session cookie for request protection and sign-in. The site does not include advertising trackers. Short-lived, hashed network identifiers are used to limit automated form abuse.', 'This static website does not use application sign-in or session cookies. It does not include advertising trackers. When you submit the contact form, Formspree may apply its own anti-spam and service protections.')
@@ -113,7 +117,7 @@ def build():
             if re.search(r'PHP (Warning|Fatal error|Parse error)', log.read()):
                 raise RuntimeError('The renderer emitted PHP diagnostics.')
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    sitemap += ''.join(f'<url><loc>{PUBLIC}{route.rstrip("/")}/</loc></url>\n' for route in routes)
+    sitemap += ''.join(f'<url><loc>{PUBLIC}{route.rstrip("/")}/</loc></url>\n' for route in routes if route != '/software-consultation')
     (ROOT / 'sitemap.xml').write_text(sitemap + '</urlset>\n', encoding='utf-8', newline='\n')
     (ROOT / 'robots.txt').write_text(f'User-agent: *\nAllow: {BASE}/\nDisallow: {BASE}/app/\nDisallow: {BASE}/scripts/\nDisallow: {BASE}/tests/\nSitemap: {PUBLIC}/sitemap.xml\n', encoding='utf-8', newline='\n')
     (ROOT / '.nojekyll').write_text('', encoding='utf-8', newline='\n')
