@@ -30,7 +30,7 @@ class PagesTests(unittest.TestCase):
     def test_all_public_pages_and_links(self):
         sitemap = ET.parse(ROOT / 'sitemap.xml')
         urls = [el.text for el in sitemap.iter('{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
-        self.assertEqual(len(urls), 38)
+        self.assertEqual(len(urls), 37)
         for url in urls:
             with self.subTest(url=url):
                 self.assertTrue(url.startswith(ORIGIN + BASE + '/'))
@@ -62,20 +62,21 @@ class PagesTests(unittest.TestCase):
     def test_project_case_studies_are_published(self):
         import json
         content = json.loads((ROOT / 'app/content.json').read_text(encoding='utf-8'))
-        self.assertEqual(len(content['projects']), 12)
+        self.assertEqual(len(content['projects']), 11)
         project = content['projects'][0]
-        self.assertEqual(len(project['features']), 10)
-        self.assertIn('full-stack delivery team', project['contribution'])
-        kumbh = content['projects'][1]
-        self.assertEqual(kumbh['slug'], 'kumbhsnaan-digital-ritual-booking-platform')
-        self.assertIn('Devotee photo upload', kumbh['features'])
-        self.assertEqual(len(kumbh['screenshots']), 2)
-        self.assertEqual(kumbh['technologies'], [])
-        treeva = content['projects'][2]
-        self.assertEqual(treeva['slug'], 'treeva-healthcare-management-system')
-        self.assertEqual(sum(f.startswith('Website: ') for f in treeva['features']), 6)
-        self.assertEqual(sum(f.startswith('Admin panel: ') for f in treeva['features']), 10)
-        self.assertIn('full-stack delivery team', treeva['contribution'])
+        self.assertEqual(len(project['features']), 12)
+        self.assertEqual(project['short'], 'MedoraOps')
+        self.assertTrue(project['concept'])
+        self.assertEqual(len(project['screenshots']), 3)
+        self.assertIn('original portfolio materials', project['contribution'])
+        treeva = content['projects'][1]
+        self.assertEqual(treeva['slug'], 'nexacare-clinic-operations-platform')
+        self.assertEqual(treeva['short'], 'NexaCare')
+        self.assertTrue(treeva['concept'])
+        self.assertEqual(sum(f.startswith('Website: ') for f in treeva['features']), 4)
+        self.assertEqual(sum(f.startswith('Admin panel: ') for f in treeva['features']), 8)
+        self.assertIn('original portfolio materials', treeva['contribution'])
+        self.assertTrue(all('/nexacare/' in shot['src'] for shot in treeva['screenshots']))
         page = (ROOT / 'projects' / treeva['slug'] / 'index.html').read_text(encoding='utf-8')
         self.assertIn('Public website features', page)
         self.assertIn('Admin panel features', page)
@@ -91,20 +92,20 @@ class PagesTests(unittest.TestCase):
             self.assertEqual(len(project['screenshots']), screenshot_count)
             self.assertTrue((ROOT / 'projects' / slug / 'index.html').is_file())
         concepts = [p for p in content['projects'] if p.get('concept')]
-        self.assertEqual(len(concepts), 4)
+        self.assertEqual(len(concepts), 6)
         for project in concepts:
-            self.assertEqual(len(project['screenshots']), 1)
-            self.assertEqual(project['screenshots'][0]['width'], 1672)
-            self.assertTrue((ROOT / project['screenshots'][0]['src'].lstrip('/')).is_file())
+            self.assertGreaterEqual(len(project['screenshots']), 1)
+            for screenshot in project['screenshots']:
+                self.assertEqual(screenshot['width'], 1672)
+                self.assertTrue((ROOT / screenshot['src'].lstrip('/')).is_file())
             page = (ROOT / 'projects' / project['slug'] / 'index.html').read_text(encoding='utf-8')
             self.assertIn('CONCEPT PROJECT', page)
             self.assertIn('not presented as commissioned client work', page)
         expected_order = [
-            'treeva-healthcare-management-system',
+            'nexacare-clinic-operations-platform',
             'finserv-crm-business-management-platform',
-            'bharat-medical-backoffice-management-system',
+            'medoraops-pharmacy-operations-platform',
             'ds-shoppy-ecommerce-rewards-platform',
-            'kumbhsnaan-digital-ritual-booking-platform',
             'sterile-aircare-solutions-corporate-website',
             'kakubaa-student-support-website',
             'electronics-ecommerce-storefront',
@@ -117,15 +118,17 @@ class PagesTests(unittest.TestCase):
         self.assertEqual(sorted(expected_order, key=listing.index), expected_order)
         home = (ROOT / 'index.html').read_text(encoding='utf-8')
         for slug in expected_order[:6]:
-            self.assertIn(f'projects/{slug}/index.html', home)
-        self.assertNotIn(f'projects/{expected_order[6]}/index.html', home)
+            self.assertIn(f'href="projects/{slug}/"', home)
+        self.assertNotIn(f'href="projects/{expected_order[6]}/"', home)
+        self.assertNotRegex(home, r'href="[^"]*/index\.html')
+        self.assertNotRegex(listing, r'href="[^"]*/index\.html')
         for slug in ['education-management-saas',
                      'crm-business-management-platform', 'hrms-payroll-system', 'warehouse-management-system']:
             for prefix in ['', 'portfolio/']:
                 self.assertFalse((ROOT / f'{prefix}projects/{slug}/index.html').exists())
 
     def test_previous_project_urls_redirect_to_root(self):
-        for route in ['', 'about', 'contact', 'projects/bharat-medical-backoffice-management-system']:
+        for route in ['', 'about', 'contact', 'projects/medoraops-pharmacy-operations-platform']:
             html = (ROOT / 'portfolio' / route / 'index.html').read_text(encoding='utf-8')
             target = ORIGIN + '/' + (route + '/' if route else '')
             self.assertIn('http-equiv="refresh"', html)

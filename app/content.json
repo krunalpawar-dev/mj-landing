@@ -1,134 +1,118 @@
 {
   "projects": [
     {
-      "slug": "bharat-medical-backoffice-management-system",
+      "slug": "medoraops-pharmacy-operations-platform",
       "weight": 110,
-      "title": "Bharat Medical Hall – Back Office & Business Management System",
-      "short": "Bharat Medical Hall",
+      "title": "MedoraOps – Pharmacy & Medical Retail Platform",
+      "short": "MedoraOps",
       "theme": "medical",
       "icon": "grid",
-      "industry": "Medical retail · Baripada, Odisha",
+      "industry": "Pharmacy operations · Concept",
       "categories": [
         "Laravel",
         "Healthcare",
-        "HRMS"
+        "ERP",
+        "Inventory",
+        "HRMS",
+        "Concept"
       ],
-      "description": "A complete website and back-office platform for Bharat Medical Hall in Baripada, Odisha, bringing employee, financial and daily business operations into one place.",
+      "concept": true,
+      "description": "A fictional operations concept for pharmacy and medical retail teams, connecting sales, stock, purchasing, batch expiry, suppliers and workforce administration.",
       "features": [
-        "Order Management",
-        "Employee Attendance Management",
-        "Leave Management",
-        "Payroll & Salary Management",
-        "Salary Payslip Generation",
-        "Project & Task Management",
-        "Challan Management",
-        "Supplier Management",
-        "Customer Management",
-        "Expense Management"
+        "Admin panel: Daily sales and cash-flow overview",
+        "Admin panel: Multi-branch inventory visibility",
+        "Admin panel: Batch and expiry monitoring",
+        "Admin panel: Low-stock and reorder suggestions",
+        "Admin panel: Supplier comparison",
+        "Admin panel: Purchase order workflow",
+        "Admin panel: Delivery tracking",
+        "Admin panel: Returns and transaction history",
+        "Admin panel: Attendance and shift coverage",
+        "Admin panel: Leave and payroll readiness",
+        "Admin panel: Staff task management",
+        "Admin panel: Role-based access controls"
       ],
-      "problem": "Bharat Medical Hall needed a centralized way to manage daily operations, employees, finances and administrative work. The system was designed to reduce manual work and make business activities easier to track.",
-      "solution": "We built a connected business management platform with ten modules. Staff can manage orders, customers, suppliers and challans alongside attendance, leave, payroll, payslips, projects, tasks and expenses. An operations dashboard brings staff availability and sales orders into a consolidated view.",
-      "contribution": "As the full-stack delivery team, we independently developed the complete website and back-office management system. Our responsibilities included system architecture, database design, backend development, business logic and user interface implementation.",
-      "impact": "The system helps the organization reduce manual work, manage employees effectively and track business activities in one platform. Connected operational and financial records support better control over everyday administrative processes.",
+      "problem": "Independent pharmacy and medical retail teams often manage sales, batches, expiry dates, suppliers, purchasing and employee records in separate tools. This makes stock planning harder, increases manual reconciliation and limits visibility across branches.",
+      "solution": "MedoraOps is a self-directed concept for a connected pharmacy operations workspace. It brings daily sales, batch-level inventory, expiry risk, supplier comparisons, purchase orders, deliveries, workforce planning and payroll readiness into a shared interface. The concept emphasizes fast exception handling and traceable operational decisions.",
+      "contribution": "This concept demonstrates workflow discovery, information architecture, dashboard design and a proposed Laravel system structure for a regulated retail environment. All screens, names and data are original portfolio materials created for demonstration; they do not represent a commissioned client project.",
+      "impact": "A platform based on this model could help teams spot low stock and expiring batches earlier, compare purchasing options, coordinate staff coverage and reduce repeated administrative work. Shared operational data could also make branch-level reporting and daily decisions more consistent.",
       "related_services": [
         "custom-web-application-development",
         "hrms-development",
         "admin-panel-development",
         "erp-development"
       ],
-      "architecture": "Centralized business management",
+      "architecture": "Multi-branch operations workspace",
       "technologies": [
         "Laravel",
-        "PHP"
+        "PHP",
+        "MySQL",
+        "JavaScript",
+        "Vue.js",
+        "REST APIs"
       ],
-      "screenshots": [],
-      "published": true
-    },
-    {
-      "slug": "kumbhsnaan-digital-ritual-booking-platform",
-      "weight": 95,
-      "title": "KumbhSnaan – Digital Gateway to Nashik Simhastha Kumbh",
-      "short": "KumbhSnaan",
-      "theme": "spiritual",
-      "icon": "grid",
-      "industry": "Spiritual services · Nashik",
-      "categories": [
-        "Website"
-      ],
-      "description": "A digital spiritual platform connecting devotees worldwide with Nashik Simhastha Kumbh through personalized Digital Snaan and Sankalp ritual bookings.",
-      "features": [
-        "Digital Snaan & Sankalp bookings",
-        "Devotee photo upload",
-        "Personal prayer submission",
-        "Preferred sacred date selection",
-        "Multiple ritual packages",
-        "Personalized ritual videos",
-        "Digital participation certificates",
-        "Holy Godavari Water & Prasad offerings"
-      ],
-      "problem": "Devotees living away from Nashik need a simple way to participate in sacred traditions remotely. The platform brings ritual information, package choices and personalized booking details into one accessible online journey.",
-      "solution": "KumbhSnaan lets devotees choose a ritual package and preferred sacred date, upload a photo and share their prayer. The service connects these requests with rituals performed by verified priests at holy kunds in Nashik. Depending on the package, devotees receive personalized ritual videos, digital certificates and sacred offerings such as Holy Godavari Water and Prasad.",
-      "contribution": "We developed KumbhSnaan, a digital spiritual platform bringing ritual discovery, package selection and personalized booking together in one website.",
-      "impact": "The platform makes it easier for devotees to arrange participation from anywhere in the world. A guided booking journey brings the information needed for personalized rituals and delivery together, while clear package details help visitors understand what they will receive.",
-      "related_services": [
-        "custom-web-application-development"
-      ],
-      "architecture": "Ritual discovery & booking",
-      "technologies": [],
       "screenshots": [
         {
-          "src": "/assets/img/portfolio/kumbhsnaan/home.jpg",
-          "alt": "KumbhSnaan homepage introducing Digital Snaan and the ritual booking journey. Frame from the supplied project recording."
+          "src": "/assets/img/portfolio/medoraops/operations-dashboard.png",
+          "alt": "Original MedoraOps concept dashboard showing pharmacy operations, inventory alerts and recent transactions",
+          "width": 1672,
+          "height": 941
         },
         {
-          "src": "/assets/img/portfolio/kumbhsnaan/booking.jpg",
-          "alt": "KumbhSnaan booking form with contact details and devotee photo upload. Frame from the supplied project recording."
+          "src": "/assets/img/portfolio/medoraops/inventory-procurement.png",
+          "alt": "Original MedoraOps inventory and procurement concept with batch, expiry and purchase order workflows",
+          "width": 1672,
+          "height": 941
+        },
+        {
+          "src": "/assets/img/portfolio/medoraops/workforce-payroll.png",
+          "alt": "Original MedoraOps workforce and payroll concept with attendance, scheduling and access controls",
+          "width": 1672,
+          "height": 941
         }
       ],
       "published": true
     },
     {
-      "slug": "treeva-healthcare-management-system",
+      "slug": "nexacare-clinic-operations-platform",
       "weight": 120,
-      "title": "Treeva Healthcare – Healthcare Website & Clinic Management System",
-      "short": "Treeva Healthcare",
+      "title": "NexaCare – Connected Clinic Operations Platform",
+      "short": "NexaCare",
       "theme": "treeva",
       "icon": "grid",
-      "industry": "Healthcare & wellness",
+      "industry": "Healthcare technology · Concept",
       "categories": [
         "Laravel",
         "Healthcare",
-        "Website"
+        "SaaS",
+        "Concept"
       ],
-      "description": "A public healthcare website and connected clinic management system for Treeva Healthcare, bringing patient enquiries, appointments, billing and daily administration into one workflow.",
+      "concept": true,
+      "description": "A fictional clinic operations concept connecting patient self-service, appointments, care workflows, billing and resource planning in one clear platform.",
       "features": [
-        "Website: Modern Healthcare & Wellness Landing Website",
-        "Website: Healthcare Service & Treatment Showcase",
-        "Website: Lead and Enquiry Collection",
-        "Website: Online Appointment Booking",
-        "Website: Contact and Consultation Requests",
-        "Website: Mobile Responsive User Interface",
-        "Admin panel: Patient Management",
-        "Admin panel: Appointment Management",
-        "Admin panel: Lead & Enquiry Management",
-        "Admin panel: Services Management",
-        "Admin panel: Billing Management",
-        "Admin panel: Invoice Generation",
-        "Admin panel: Expense Management",
-        "Admin panel: Staff & User Management",
-        "Admin panel: Role-Based Access Control",
-        "Admin panel: Centralized Administrative Dashboard"
+        "Website: Patient self-service dashboard",
+        "Website: Specialist discovery and appointment booking",
+        "Website: Upcoming visit reminders",
+        "Website: Treatment and prescription overview",
+        "Admin panel: Live appointment and waiting queue",
+        "Admin panel: De-identified patient records",
+        "Admin panel: Care timeline and clinical notes",
+        "Admin panel: Prescription and care task tracking",
+        "Admin panel: Billing and payment status",
+        "Admin panel: Room and staff utilization",
+        "Admin panel: Operational analytics",
+        "Admin panel: Role-based workspace access"
       ],
-      "problem": "Treeva Healthcare needed a public website to showcase its healthcare and wellness services, collect patient enquiries and support online appointment booking. The center also needed an administration system to manage patients, services, finances and staff in one place.",
-      "solution": "We developed a complete website and clinic management system for a center focused on homeopathy, cosmetology, skin and hair care, aesthetic consultation and obesity management. The public website presents services and collects appointment and consultation requests. A connected admin panel manages the workflow from enquiry and scheduling to patient records, billing, invoices, expenses and staff administration.",
-      "contribution": "As the full-stack delivery team, we independently developed the complete project: the public healthcare website, admin panel, database architecture, backend development, business logic, appointment workflow, billing and invoice management, role-based permissions and responsive user interface.",
-      "impact": "The system streamlines the journey from patient enquiry and appointment booking to clinic administration. Centralized patient, service and financial records help the team coordinate day-to-day work, while role-based access controls staff access to administrative functions.",
+      "problem": "Growing clinics often manage bookings, patient follow-ups, staff schedules, rooms and billing across separate tools. That fragmentation can create duplicate work, incomplete handovers and limited visibility into the day ahead.",
+      "solution": "NexaCare is a self-directed product concept for a connected clinic workspace. Patients can find specialists, book visits and review reminders, while clinic teams get a shared operational dashboard, patient timelines, care tasks, billing status and resource utilization. The concept prioritizes clear information hierarchy, privacy-aware demo data and fast access to daily actions.",
+      "contribution": "This concept demonstrates product discovery, workflow mapping, information architecture, responsive interface design and a proposed Laravel application structure. The screens and data are original portfolio materials created for demonstration; they do not represent a commissioned client system.",
+      "impact": "A platform following this model could reduce repeated data entry, make appointment demand easier to plan and give care teams a clearer view of outstanding work. The concept also shows how patient-facing and administrative experiences can share one consistent system without exposing sensitive information.",
       "related_services": [
         "healthcare-management-system-development",
         "admin-panel-development",
         "custom-web-application-development"
       ],
-      "architecture": "Public website + clinic administration",
+      "architecture": "Patient portal + clinic operations workspace",
       "technologies": [
         "Laravel",
         "PHP",
@@ -138,16 +122,22 @@
       ],
       "screenshots": [
         {
-          "src": "/assets/img/portfolio/treeva/appointments.jpg",
-          "alt": "Treeva Healthcare public website offering appointment requests and patient enquiries. Frame from the supplied project recording."
+          "src": "/assets/img/portfolio/nexacare/patient-portal.png",
+          "alt": "Original NexaCare concept showing a patient portal with appointments, treatment categories and specialist availability.",
+          "width": 1672,
+          "height": 941
         },
         {
-          "src": "/assets/img/portfolio/treeva/invoices.jpg",
-          "alt": "Treeva Healthcare admin panel showing invoice numbering and clinic invoice settings. Frame from the supplied project recording."
+          "src": "/assets/img/portfolio/nexacare/clinic-dashboard.png",
+          "alt": "Original NexaCare concept showing clinic operations, patient queue, appointments and resource utilization.",
+          "width": 1672,
+          "height": 941
         },
         {
-          "src": "/assets/img/portfolio/treeva/permissions.jpg",
-          "alt": "Treeva Healthcare role and permission management screen. Frame from the supplied project recording."
+          "src": "/assets/img/portfolio/nexacare/patient-workflow.png",
+          "alt": "Original NexaCare concept showing a de-identified patient timeline, care tasks, prescriptions and billing status.",
+          "width": 1672,
+          "height": 941
         }
       ],
       "published": true

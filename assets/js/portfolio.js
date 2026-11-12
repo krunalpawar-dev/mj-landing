@@ -251,7 +251,9 @@
     if (!link || link.hasAttribute('download') || (link.target && link.target !== '_self') || link.hasAttribute('data-no-navigation')) return;
     const url = new URL(link.href, location.href);
     if (url.origin !== location.origin || !/^https?:$/.test(url.protocol)) return;
-    if (url.pathname !== '/' && !url.pathname.endsWith('/index.html')) return;
+    const lastSegment = url.pathname.split('/').pop();
+    const pageRoute = url.pathname === '/' || url.pathname.endsWith('/') || url.pathname.endsWith('/index.html') || !lastSegment.includes('.');
+    if (!pageRoute) return;
     if (url.pathname === location.pathname && url.search === location.search && url.hash) {
       cancelNavigation();
       closeMenu();

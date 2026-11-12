@@ -54,13 +54,16 @@ def build():
                         attribute, value = match.groups()
                         parsed = urlsplit(value)
                         path = parsed.path
+                        page_route = path in routes
                         if path == '/':
-                            target = ROOT / 'index.html'
-                        elif path in routes:
-                            target = ROOT / path.strip('/') / 'index.html'
+                            target = ROOT
+                        elif page_route:
+                            target = ROOT / path.strip('/')
                         else:
                             target = ROOT / path.lstrip('/')
                         relative = os.path.relpath(target, destination.parent).replace('\\', '/')
+                        if page_route:
+                            relative = './' if relative == '.' else relative.rstrip('/') + '/'
                         return f'{attribute}="{urlunsplit(("", "", relative, parsed.query, parsed.fragment))}"'
 
                     with urlopen(local + route) as response:
